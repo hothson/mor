@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "mattisse";
+    src: url("fonts/mattisse/Mattisse Personal Use.ttf");
+}
+
+@font-face {
+    font-family: "seurat";
+    src: url("fonts/mattisse/SEURAT_Regular.ttf");
+}
+
+.navbar {
+    float: right;
+}
+
+.mainmenu-area {
+    height: 90px;
+    background-color: #103C60;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999
+}
+
+.navbar-nav>li>a {
+    padding: 30px;
+    color: #D1E0EB;
+    font-size: 14px;
+    font-family: "mattisse";
+}
+
+.navbar-nav>li {
+    padding-left: 25px;
+}
+
+.mainmenu-area .custom.navbar>li>a:hover {
+    background-color:  #0C3C60;
+}
+
+.navbar-brand.custom {
+    height: 35px;
+    margin-top: 28px;
+}
+
+.video video {
+    width: 100%;
+    height: 800px;
+}
+
+.video {
+    height: 800px;
+    position: relative;
+}
+
+.video img {
+    position: absolute;
+    top: 38%;
+    left: 38%;
+
+
+}
+
+.video-area .blur-section {
+    height: 139px;
+    background-color: #C2C4C7;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0.6;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.video-area .blur-section h6 {
+    font-size: 28px;
+    color: #154465;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 15px;
+}
+
+.video-area .blur-section h3 {
+    font-size: 58px;
+    color: #103C60;
+    font-family: 'Roboto', sans-serif;
+    margin-top: -7px;
+}
+
+.service-area {
+    height: 500px;
+    background-color: #D8E1EB;
+}
+
+.header-text {
+    color: #39729B;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 49px
+}
+
+.service-area .service-col {
+    background-color: #0C3C60;
+    height: 280px;
+}
+
+.service-area .service-col h1 {
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    padding: 31px 0;
+}
+
+.service-area .service-col p {
+    color: white;
+    font-size: 16px;
+    padding: 0px 20px;
+}
+
+.news-area {
+    height: 400px;
+    background-color: #FFFFFF;
+}
+
+.news-area .news span{
+    color: #39729B;
+    padding: 0 200px;
+    font-size: 18px;
+}
+
+.news-area .news p{
+    padding-top: 20px;
+}
+
+.about-area {
+    height: 790px;
+    background-color: #D1E0EB;
+}
+
+.about-area .about-col {
+    font-size: 16px;
+    color: #D1E0EB;
+}
+
+.about-area .about-col tr{
+    color: #0C3C60;
+}
+
+.about-col .th-custom {
+    width: 120px;
+}
+
+.about-col .ul-custom {
+    padding-left: 15px;
+}
+
+.access-area {
+    height: 600px;
+}
+
+.access-area .map img{
+    width: 100%;
+    height: 300px;
+    padding-bottom: 20px;
+}
+
+.hidden-class:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.access-area span {
+    padding-top: 10px;
+}
+
+.contact-area {
+    height: 600px;
+    background-color: #0C3C60;
+}
+
+.contact-area .custom {
+    color: white;
+    background-color: #39729B;
+    float: right;
+}
+
+.footer-area {
+    height: 150px;
+    background-color: #fff;
+}
+
+.footer-content img{
+    width: 250px;
+    height: 40px;
+    margin-top: 25px;
+}
+
+.footer-content a {
+    margin-left: 20px;
+}
+
+.fa.fa-facebook-square.custom, .fa.fa-youtube.custom{
+    font-size: 40px;
+}
+
+.copyright-text {
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-content .right-content span{
+    color: #154465;
+}
+
+.footer-content .footer-text {
+    padding-top: 15px;
+}
+
+
+.footer-content .right-content span:not(:first-child){
+    float: right;
+    padding-top: 15px;
+}
+
+.footer-content {
+    font-family: 'mattisse';
+}
