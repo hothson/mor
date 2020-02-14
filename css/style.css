@@ -41,25 +41,27 @@
     margin-top: 28px;
 }
 
-.video video {
-    width: 100%;
-    height: 800px;
+.video-area {
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+}
+.video {
+    
 }
 
-.video {
-    height: 800px;
-    position: relative;
+.video video {
+    width: 100%;
 }
 
 .video img {
     position: absolute;
     top: 38%;
-    left: 38%;
-
-
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.video-area .blur-section {
+.video-area .vision-content{
     height: 139px;
     background-color: #C2C4C7;
     width: 100%;
@@ -70,14 +72,14 @@
     text-align: center;
 }
 
-.video-area .blur-section h6 {
+.vision-content h6 {
     font-size: 28px;
     color: #154465;
     font-family: 'Roboto', sans-serif;
     padding-top: 15px;
 }
 
-.video-area .blur-section h3 {
+.vision-content h3 {
     font-size: 58px;
     color: #103C60;
     font-family: 'Roboto', sans-serif;
@@ -85,7 +87,7 @@
 }
 
 .service-area {
-    height: 500px;
+    height: 1000px;
     background-color: #D8E1EB;
 }
 
