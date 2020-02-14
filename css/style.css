@@ -3,11 +3,6 @@
     src: url("fonts/mattisse/Mattisse Personal Use.ttf");
 }
 
-@font-face {
-    font-family: "seurat";
-    src: url("fonts/mattisse/SEURAT_Regular.ttf");
-}
-
 .navbar {
     float: right;
 }
@@ -46,12 +41,11 @@
     overflow: hidden;
     height: 700px;
 }
-.video {
-    
-}
 
 .video video {
     width: 100%;
+    position: fixed;
+    z-index: -1;
 }
 
 .video img {
@@ -87,7 +81,7 @@
 }
 
 .service-area {
-    height: 1000px;
+    height: 517px;
     background-color: #D8E1EB;
 }
 
@@ -156,7 +150,8 @@
 }
 
 .access-area {
-    height: 600px;
+    height: 563px;
+    background-color: #FFFFFF;
 }
 
 .access-area .map img{
@@ -173,11 +168,17 @@
 
 .access-area span {
     padding-top: 10px;
+    color: #103C60;
 }
 
 .contact-area {
     height: 600px;
     background-color: #0C3C60;
+    color: #0C3C60;
+}
+
+.contact-area input::placeholder, .contact-area textarea::placeholder {
+    color: #0C3C60;
 }
 
 .contact-area .custom {
@@ -187,7 +188,7 @@
 }
 
 .footer-area {
-    height: 150px;
+    height: 188px;
     background-color: #fff;
 }
 
