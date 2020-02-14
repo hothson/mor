@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
     font-family: "mattisse";
     src: url("fonts/mattisse/Mattisse Personal Use.ttf");
-}
+} */
 
 .navbar {
     float: right;
@@ -20,7 +20,7 @@
     padding: 30px;
     color: #D1E0EB;
     font-size: 14px;
-    font-family: "mattisse";
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar-nav>li {
@@ -199,32 +199,35 @@
 }
 
 .footer-content a {
-    margin-left: 20px;
+    margin-left: 8px;
 }
 
 .fa.fa-facebook-square.custom, .fa.fa-youtube.custom{
-    font-size: 40px;
+    font-size: 27px;
 }
 
 .copyright-text {
     text-align: center;
     padding: 10px;
+    width: 100%;
 }
 
-.footer-content .right-content span{
+.footer-content .right-content .privacy {
     color: #154465;
+    float: right;
+    padding-top: 20px;
 }
 
 .footer-content .footer-text {
     padding-top: 15px;
 }
 
-
-.footer-content .right-content span:not(:first-child){
+.footer-content .right-content .social {
     float: right;
-    padding-top: 15px;
+    margin-left: 10px;
+    color: #154465;
 }
 
 .footer-content {
-    font-family: 'mattisse';
+    font-family: 'Roboto', sans-serif;
 }
