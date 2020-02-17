@@ -50,8 +50,8 @@
 
 .video img {
     position: absolute;
-    top: 38%;
     left: 50%;
+    top: 38%;
     transform: translateX(-50%);
 }
 
@@ -210,7 +210,6 @@
     text-align: center;
     padding: 10px;
     width: 100%;
-    adfa;
 }
 
 .footer-content .right-content .privacy {
@@ -231,4 +230,18 @@
 
 .footer-content {
     font-family: 'Roboto', sans-serif;
+}
+
+#exampleModalLong {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+#exampleModalLong h3, #exampleModalLong h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#exampleModalLong span {
+    float: right;
 }
