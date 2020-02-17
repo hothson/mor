@@ -2,19 +2,44 @@
     font-family: "mattisse";
     src: url("fonts/mattisse/Mattisse Personal Use.ttf");
 } */
-
-.navbar {
-    float: right;
+@media (min-width: 992px) {
+    .navbar-brand.custom {
+        height: 35px;
+    }
+}
+@media (min-width: 576px) {
+    .navbar-brand.custom {
+        height: 28px;
+    }
 }
 
-.mainmenu-area {
-    height: 90px;
-    background-color: #103C60;
-    position: fixed;
-    top: 0;
+@media (max-width: 575.98px) {
+    .navbar-brand.custom {
+        height: 28px;
+    }
+}
+
+
+.mainmenu-area .bg-light.custom {
+    background-color: #103C60 !important;
     width: 100%;
-    z-index: 999
+    position: fixed;
+    z-index: 999;
 }
+
+.navbar-nav {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.navbar-light .navbar-nav .nav-link.custom {
+    padding: 29px;
+    color: #D1E0EB;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Old menu */
 
 .navbar-nav>li>a {
     padding: 30px;
@@ -29,11 +54,6 @@
 
 .mainmenu-area .custom.navbar>li>a:hover {
     background-color:  #0C3C60;
-}
-
-.navbar-brand.custom {
-    height: 35px;
-    margin-top: 28px;
 }
 
 .video-area {
