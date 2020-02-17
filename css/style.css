@@ -340,8 +340,13 @@
     float: right;
 }
 
+@media (max-width: 992px) {
+    .contact-area .header-text {
+        padding-top: 0px;
+    }
+}
 .footer-area {
-    height: 188px;
+    height: 194px;
     background-color: #fff;
 }
 
@@ -361,14 +366,22 @@
 
 .copyright-text {
     text-align: center;
-    padding: 10px;
+    padding: 21px;
     width: 100%;
+}
+
+.right-content {
+    position: relative;
 }
 
 .footer-content .right-content .privacy {
     color: #154465;
     float: right;
     padding-top: 20px;
+    padding-bottom: 10px;
+    position: absolute;
+    right: 0;
+    top: 10px;
 }
 
 .footer-content .footer-text {
