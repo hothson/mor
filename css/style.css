@@ -56,12 +56,6 @@
     background-color:  #0C3C60;
 }
 
-.video-area {
-    position: relative;
-    overflow: hidden;
-    height: 700px;
-}
-
 .video video {
     width: 100%;
     position: fixed;
@@ -86,6 +80,11 @@
     text-align: center;
 }
 
+.video-area {
+    position: relative;
+    overflow: hidden;
+}
+
 .vision-content h6 {
     font-size: 28px;
     color: #154465;
@@ -98,6 +97,77 @@
     color: #103C60;
     font-family: 'Roboto', sans-serif;
     margin-top: -7px;
+}
+
+@media (max-width: 575.98px) {
+    .video-area {
+        height: 175px;
+    }
+
+    .video img {
+        width: 118px;
+    }
+
+    .video-area .vision-content {
+        height: 51px;
+    }
+
+    .vision-content h6 {
+        padding-top: 0px;
+        font-size: 15px;
+    }
+
+    .vision-content h3 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 576px) {
+    .video-area {
+        height: 311px;
+    }
+
+    .video img {
+        width: 242px;
+    }
+
+    .video-area .vision-content {
+        height: 88px;
+    }
+
+    .vision-content h6 {
+        padding-top: 0px;
+        font-size: 23px;
+    }
+
+    .vision-content h3 {
+        font-size: 33px;
+    }
+}
+
+@media (min-width: 768px) {
+    .video-area {
+        height: 413px;
+    }
+
+    .video img {
+        left: 50%;
+        top: 30%;
+        transform: translateX(-50%);
+        width: 242px;
+    }
+}
+
+@media (min-width: 992px) {
+    .video-area {
+        height: 546px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .video-area {
+        height: 659px;
+    }
 }
 
 .service-area {
