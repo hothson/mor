@@ -101,7 +101,8 @@
 
 @media (max-width: 575.98px) {
     .video-area {
-        height: 175px;
+        height: 282px;
+        padding-top: 56px;
     }
 
     .video img {
