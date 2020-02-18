@@ -10,24 +10,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- Title -->
     <title>Mor Asia | Make Our Dream Realized</title>
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">       
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- Main-Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcSqtkUAAAAAMuoGp2Xr6boPallQfnyeS7Pmf9Q"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
+    <?php
+        session_start();
+    ?>
     <!-- MainMenu-Area -->
     <section class="mainmenu-area">
         <nav class="navbar navbar-expand-lg navbar-light bg-light custom" id="menu-bar">
             <div class="container">
                 <img class="navbar-brand custom" src="images/MorLogoWhite.png" alt="">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -55,24 +57,24 @@
     <!-- MainMenu-Area-End -->
     <!-- video-Area -->
     <section class="video-area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="video">
-                        <video autoplay loop>
-                            <source src="videos/World - 1992.mp4" type="video/mp4">
-                        </video>
-                        <img src="images/logo_plus_slogan.png" alt="">
-                    </div>
-                </div>
-                <!-- vision-Area -->
-                <div class="row">
-                    <div class="vision-content">
-                        <h6>Vision</h6>
-                        <h3>Make Our Dream Realized</h3>
-                    </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="video">
+                    <video autoplay loop>
+                        <source src="videos/World - 1992.mp4" type="video/mp4">
+                    </video>
+                    <img src="images/logo_plus_slogan.png" alt="">
                 </div>
             </div>
-        </section>
+            <!-- vision-Area -->
+            <div class="row">
+                <div class="vision-content">
+                    <h6>Vision</h6>
+                    <h3>Make Our Dream Realized</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- service-Area -->
     <section class="service-area" id="service">
@@ -154,7 +156,7 @@
                                 <tr>
                                     <th scope="row">住所</th>
                                     <td>〒171-0022<br>
-                                    ​   京都豊島区南池袋2-9-3 サンビルディング4階</td>
+                                        ​ 京都豊島区南池袋2-9-3 サンビルディング4階</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">設立</th>
@@ -192,44 +194,44 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6">
-                        <div class="about-col">
-                            <table class="table table-borderless">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row" class="th-custom">​事業内容</th>
-                                        <td colspan="2">
-                                            <span>システム開発</span>
-                                            <ul class="ul-custom">
-                                                <li>システムコンサルティング</li>
-                                                <li>常駐開発</li>
-                                                <li>ラボ型開発</li>
-                                                <li>受託開発</li>
-                                            </ul>
-                                            <span>React.js/Reduxを用いた高パフォーマンスのウェブシステムの開発
-                                                Node.jsやSocket.ioを用いたリアルタイムチャットシステムの開発
-                                                AI応用研究およびAIシステム開発</span>
-                                            <ul class="ul-custom">
-                                                <li>OCR</li>
-                                                <li>スマート認証</li>
-                                                <li>スマートチェックイン等</li>
-                                            </ul>
-                                            <span>ブロックチェーンや仮想通貨の開発・運用</span>
-                                            <ul class="ul-custom">
-                                                <li>取引所の構築・運用</li>
-                                                <li>仮想通貨の発行（ICO）</li>
-                                                <li>ブロックチェーンやスマートコントラクトを用いたシステム開発</li>
-                                            </ul>
-                                            <span>IT人材育成</span>
-                                            <ul class="ul-custom">
-                                                <li>採用支援</li>
-                                                <li>ベトナム進出支援</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="about-col">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="th-custom">​事業内容</th>
+                                    <td colspan="2">
+                                        <span>システム開発</span>
+                                        <ul class="ul-custom">
+                                            <li>システムコンサルティング</li>
+                                            <li>常駐開発</li>
+                                            <li>ラボ型開発</li>
+                                            <li>受託開発</li>
+                                        </ul>
+                                        <span>React.js/Reduxを用いた高パフォーマンスのウェブシステムの開発
+                                            Node.jsやSocket.ioを用いたリアルタイムチャットシステムの開発
+                                            AI応用研究およびAIシステム開発</span>
+                                        <ul class="ul-custom">
+                                            <li>OCR</li>
+                                            <li>スマート認証</li>
+                                            <li>スマートチェックイン等</li>
+                                        </ul>
+                                        <span>ブロックチェーンや仮想通貨の開発・運用</span>
+                                        <ul class="ul-custom">
+                                            <li>取引所の構築・運用</li>
+                                            <li>仮想通貨の発行（ICO）</li>
+                                            <li>ブロックチェーンやスマートコントラクトを用いたシステム開発</li>
+                                        </ul>
+                                        <span>IT人材育成</span>
+                                        <ul class="ul-custom">
+                                            <li>採用支援</li>
+                                            <li>ベトナム進出支援</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                </div>
             </div>
         </div>
     </section>
@@ -250,8 +252,7 @@
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.0406542146457!2d139.7122001507637!3d35.725218680086925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d69795beac3%3A0xdf2172f8202cd7df!2zSmFwYW4sIOOAkjE3MS0wMDIyIFTFjWt5xY0tdG8sIFRvc2hpbWEgQ2l0eSwgTWluYW1paWtlYnVrdXJvLCAyLWNoxY1tZeKIkjniiJIzIOOCteODs-ODk-ODq-ODh-OCo-ODs-OCsCA06ZqO!5e0!3m2!1sen!2s!4v1581949674210!5m2!1sen!2s"
-                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.0406542146457!2d139.7122001507637!3d35.725218680086925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d69795beac3%3A0xdf2172f8202cd7df!2zSmFwYW4sIOOAkjE3MS0wMDIyIFTFjWt5xY0tdG8sIFRvc2hpbWEgQ2l0eSwgTWluYW1paWtlYnVrdXJvLCAyLWNoxY1tZeKIkjniiJIzIOOCteODs-ODk-ODq-ODh-OCo-ODs-OCsCA06ZqO!5e0!3m2!1sen!2s!4v1581949674210!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
                         </iframe>
                     </div>
                     <div>
@@ -280,25 +281,36 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                    <form>
+                    <form method="POST" action="function.php">
+                        <?php if (isset($_SESSION['success'])) {?>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo($_SESSION['success']); ?>
+                            </div>
+                        <?php } ?>
+                        <?php if (isset($_SESSION['error'])) {?>
+                            <div class="alert alert-danger" role="alert">
+                                <?php echo($_SESSION['error']); ?> 
+                            </div>
+                        <?php } ?>
+                        <?php session_destroy(); ?>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="お名前">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="お名前" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="company-name" placeholder="会社名">
+                            <input type="text" class="form-control" id="company-name" name="company-name" placeholder="会社名" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="メールアドレス">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレス" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="subject" placeholder="件名">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="件名">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="requirement" rows="3" placeholder="ここにお問い合わせ内容を入力してください"></textarea>
+                            <textarea class="form-control" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください" required></textarea>
                         </div>
                         <div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6LcSqtkUAAAAAMuoGp2Xr6boPallQfnyeS7Pmf9Q"></div>
-                            <button type="submit" class="btn btn-primary custom">送信</button>
+                            <div class="g-recaptcha" data-sitekey="6Lca19kUAAAAABFBPIvE3-wBBx5KDdkS0mYhk8om" required></div>
+                            <button type="submit" name="submit" class="btn btn-primary custom">送信</button>
                         </div>
                     </form>
                 </div>
@@ -309,105 +321,103 @@
     <!-- Contact-Area-End -->
     <!-- Footer-Area -->
     <section class="footer-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-8">
-                        <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="row">
 
-                        </div>
-                        <div class="footer-content">
-                            <div class="row">
-                                <div class="col-sm-2">
-                                    <img src="images/MorLogoBlack.png" alt="">
-                                </div>
-                                <div class="col-sm-8"></div>
+                    </div>
+                    <div class="footer-content">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <img src="images/MorLogoBlack.png" alt="">
                             </div>
-                            <div class="row">
-                                <div class="col-lg-8 col-sm-12">
-                                    <div class="footer-text">
-                                        <span>住所 &nbsp; &nbsp; &nbsp; <span>〒171-0022</span></span>
-                                        <br>
-                                        <span>東京都豊島区南池袋2-9-3 サンビルディング4階</span>
-                                    </div>
+                            <div class="col-sm-8"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-sm-12">
+                                <div class="footer-text">
+                                    <span>住所 &nbsp; &nbsp; &nbsp; <span>〒171-0022</span></span>
+                                    <br>
+                                    <span>東京都豊島区南池袋2-9-3 サンビルディング4階</span>
                                 </div>
-                                <div class="col-lg-4 col-sm-12">
-                                    <div class="right-content">
-                                        <div class="social">
-                                            <span>​03-5924-6616</span>
-                                            <span>
-                                                <a><i class="fa fa-youtube custom"></i></a>
-                                            </span>
-                                            <span>
-                                                <a><i class="fa fa-facebook-square custom"></i></a>
-                                            </span>
-                                        </div>
-                                        <div class="privacy">
-                                            <span data-toggle="modal" data-target="#exampleModalLong">Privacy Policy</span>
-                                        </div>
-                                        <!-- Modal -->
-                                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                                            aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        </div>
-                                        <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-                                            aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLongTitle">プライバシーポリシー</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <h3>1．基本方針</h3>
-                                                        <p>
-                                                            株式会社モアソフトウエア(以下｢当社｣)は、業務を遂行するうえで、当社に従事する者は、個人情報の保護を重要な責務であることを認識し、個人情報を正確かつ安全に取り扱います。
-                                                        </p>
-                                                        <h3>2．法令等の遵守</h3>
-                                                        <p>
-                                                            当社は、「個人情報の保護に関する法律」等個人情報の保護に関する法令、国が定めるガイドラインおよび本個人情報保護方針を遵守いたします。
-                                                        </p>
-                                                        <h3>3．個人情報の取り扱い</h3>
-                                                        <h4>（1）個人情報の利用目的について</h4>
-                                                        <p>当社は、利用目的の範囲内で適切な取り扱いをし、取得または預託された個人情報を利用目的以外の利用は行いません。</p>
-                                                        <h4>（2）個人情報の管理について</h4>
-                                                        <p>当社は、個人情報への不正アクセス、個人情報の紛失、破壊、改ざんおよび漏洩等のリスクを認識し、予防ならびに是正に努めます。個人情報へのアクセスは、必要最小限の役員従業員に限定します。
-                                                            個人情報の取り扱いを外部に委託する場合、
-                                                            十分な個人情報保護水準を確保していることを条件として委託先を選定します。また、委託を受けたものに対する必要かつ適切な監督を行います。</p>
-                                                        <h4>（3）個人情報の開示について</h4>
-                                                        <p>当社は、個人情報に関する本人の権利を尊重し、その個人情報に対して開示、訂正および削除を求められた場合、合理的な手続を通してこれに応じます。</p>
-                                                        
-                                                        <h3>4．教育</h3>
-                                                        <p>当社は、個人情報の保護に関する教育を、全従業員に対して継続的に行い、個人情報の適切な取り扱いを実践いたします。</p>
-                                                        
-                                                        <h3>5．苦情および相談への対応</h3>
-                                                        <p>個人情報の取り扱いに関する苦情および相談を受けた場合には、その内容について事実関係等を迅速に調査し、合理的な期間内に誠意をもって対応いたします。</p>
-                                                        
-                                                        <h3>6．個人情報保護マネジメントシステムの改善</h3>
-                                                        <p>当社は、社会情勢・社会環境の変化を踏まえ保有する個人情報の保護に関するための方針、監査および見直しを含むマネジメントシステムを適切に継続的な改善を行います。
-                                                            代表取締役社長　レ　マン　フン（Le Manh Hung） ＜弊社の個人情報に関するご相談窓口＞ 本個人情報保護方針に関するお問い合わせは、下記までお願いします。 個人情報保護取扱窓口
-                                                            contact@mor.vn なお、採用活動を通じてご提供いただいたお客様の個人情報に関するお問い合わせは、上記メールアドレス若しくは総合窓口（03-5924-6616）にて承ります。</p>
-                                                        
-                                                        <span>制定日　2017年2月1日</span>
-                                                    </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="right-content">
+                                    <div class="social">
+                                        <span>​03-5924-6616</span>
+                                        <span>
+                                            <a><i class="fa fa-youtube custom"></i></a>
+                                        </span>
+                                        <span>
+                                            <a><i class="fa fa-facebook-square custom"></i></a>
+                                        </span>
+                                    </div>
+                                    <div class="privacy">
+                                        <span data-toggle="modal" data-target="#exampleModalLong">Privacy Policy</span>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                    </div>
+                                    <div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">プライバシーポリシー</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h3>1．基本方針</h3>
+                                                    <p>
+                                                        株式会社モアソフトウエア(以下｢当社｣)は、業務を遂行するうえで、当社に従事する者は、個人情報の保護を重要な責務であることを認識し、個人情報を正確かつ安全に取り扱います。
+                                                    </p>
+                                                    <h3>2．法令等の遵守</h3>
+                                                    <p>
+                                                        当社は、「個人情報の保護に関する法律」等個人情報の保護に関する法令、国が定めるガイドラインおよび本個人情報保護方針を遵守いたします。
+                                                    </p>
+                                                    <h3>3．個人情報の取り扱い</h3>
+                                                    <h4>（1）個人情報の利用目的について</h4>
+                                                    <p>当社は、利用目的の範囲内で適切な取り扱いをし、取得または預託された個人情報を利用目的以外の利用は行いません。</p>
+                                                    <h4>（2）個人情報の管理について</h4>
+                                                    <p>当社は、個人情報への不正アクセス、個人情報の紛失、破壊、改ざんおよび漏洩等のリスクを認識し、予防ならびに是正に努めます。個人情報へのアクセスは、必要最小限の役員従業員に限定します。
+                                                        個人情報の取り扱いを外部に委託する場合、
+                                                        十分な個人情報保護水準を確保していることを条件として委託先を選定します。また、委託を受けたものに対する必要かつ適切な監督を行います。</p>
+                                                    <h4>（3）個人情報の開示について</h4>
+                                                    <p>当社は、個人情報に関する本人の権利を尊重し、その個人情報に対して開示、訂正および削除を求められた場合、合理的な手続を通してこれに応じます。</p>
+
+                                                    <h3>4．教育</h3>
+                                                    <p>当社は、個人情報の保護に関する教育を、全従業員に対して継続的に行い、個人情報の適切な取り扱いを実践いたします。</p>
+
+                                                    <h3>5．苦情および相談への対応</h3>
+                                                    <p>個人情報の取り扱いに関する苦情および相談を受けた場合には、その内容について事実関係等を迅速に調査し、合理的な期間内に誠意をもって対応いたします。</p>
+
+                                                    <h3>6．個人情報保護マネジメントシステムの改善</h3>
+                                                    <p>当社は、社会情勢・社会環境の変化を踏まえ保有する個人情報の保護に関するための方針、監査および見直しを含むマネジメントシステムを適切に継続的な改善を行います。
+                                                        代表取締役社長　レ　マン　フン（Le Manh Hung） ＜弊社の個人情報に関するご相談窓口＞ 本個人情報保護方針に関するお問い合わせは、下記までお願いします。 個人情報保護取扱窓口
+                                                        contact@mor.vn なお、採用活動を通じてご提供いただいたお客様の個人情報に関するお問い合わせは、上記メールアドレス若しくは総合窓口（03-5924-6616）にて承ります。</p>
+
+                                                    <span>制定日　2017年2月1日</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="copyright-text">
-                                    <span>&copy; 2020 Mor asia .inc</span>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="copyright-text">
+                                <span>&copy; 2020 Mor asia .inc</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-2"></div>
                 </div>
+                <div class="col-sm-2"></div>
             </div>
-        </section>
+        </div>
+    </section>
     <!-- Footer-Area-End -->
     <!--Vendor-JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
