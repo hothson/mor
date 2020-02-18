@@ -304,13 +304,13 @@
 }
 
 .access-area {
-    height: 563px;
+    height: 605px;
     background-color: #FFFFFF;
 }
 
-.access-area .map img{
+.access-area .map iframe{
     width: 100%;
-    height: 300px;
+    height: 342px;;
     padding-bottom: 20px;
 }
 

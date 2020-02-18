@@ -17,12 +17,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">       
     <!-- Main-Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcSqtkUAAAAAMuoGp2Xr6boPallQfnyeS7Pmf9Q"></script>
 </head>
 
 <body>
     <!-- MainMenu-Area -->
     <section class="mainmenu-area">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light custom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light custom" id="menu-bar">
             <div class="container">
                 <img class="navbar-brand custom" src="images/MorLogoWhite.png" alt="">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -32,19 +33,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link custom" href="#">SERVICE <span class="sr-only">(current)</span></a>
+                            <a class="nav-link custom" href="#service">SERVICE <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link custom" href="#">NEWS</a>
+                            <a class="nav-link custom" href="#news">NEWS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link custom" href="#">ABOUT US</a>
+                            <a class="nav-link custom" href="#about-us">ABOUT US</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link custom" href="#">ACCESS</a>
+                            <a class="nav-link custom" href="#access">ACCESS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link custom" href="#">CONTACT</a>
+                            <a class="nav-link custom" href="#contact">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +75,7 @@
         </section>
 
     <!-- service-Area -->
-    <section class="service-area">
+    <section class="service-area" id="service">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -108,7 +109,7 @@
     <!-- MainMenu-Area-End -->
 
     <!-- news-Area -->
-    <section class="news-area">
+    <section class="news-area" id="news">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -132,7 +133,7 @@
     <!-- news-Area-End -->
 
     <!-- about-Area -->
-    <section class="about-area">
+    <section class="about-area" id="about-us">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -235,7 +236,7 @@
     <!-- about-Area-End -->
 
     <!-- Access-Area -->
-    <section class="access-area">
+    <section class="access-area" id="access">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -249,7 +250,9 @@
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
                     <div class="map">
-                        <img src="images/map.jpg" alt="">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.0406542146457!2d139.7122001507637!3d35.725218680086925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d69795beac3%3A0xdf2172f8202cd7df!2zSmFwYW4sIOOAkjE3MS0wMDIyIFTFjWt5xY0tdG8sIFRvc2hpbWEgQ2l0eSwgTWluYW1paWtlYnVrdXJvLCAyLWNoxY1tZeKIkjniiJIzIOOCteODs-ODk-ODq-ODh-OCo-ODs-OCsCA06ZqO!5e0!3m2!1sen!2s!4v1581949674210!5m2!1sen!2s"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+                        </iframe>
                     </div>
                     <div>
                         <span>JR線、丸の内線　池袋駅東口より徒歩8分</span>
@@ -265,7 +268,7 @@
     <!-- news-Area-End -->
 
     <!-- Contact-Area -->
-    <section class="contact-area">
+    <section class="contact-area" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -294,7 +297,7 @@
                             <textarea class="form-control" id="requirement" rows="3" placeholder="ここにお問い合わせ内容を入力してください"></textarea>
                         </div>
                         <div class="form-group">
-                            <img src="images/capcha.webp" alt="">
+                            <div class="g-recaptcha" data-sitekey="6LcSqtkUAAAAAMuoGp2Xr6boPallQfnyeS7Pmf9Q"></div>
                             <button type="submit" class="btn btn-primary custom">送信</button>
                         </div>
                     </form>
@@ -407,11 +410,11 @@
         </section>
     <!-- Footer-Area-End -->
     <!--Vendor-JS-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!--Main-active-JS-->
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
