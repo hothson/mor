@@ -1,13 +1,19 @@
 <?php
-// Import PHPMailer classes into the global namespace
-// These must be at the top of your script, not inside a function
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-// Load Composer's autoloader
 require 'vendor/autoload.php';
-$mail = new PHPMailer(true);
+include 'config.php';
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $companyName = $_POST['company-name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $requirement = $_POST['requirement'];
+}
 
 if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
     $secret = '6Lca19kUAAAAAIr5Zv2x1UE0D2pFA2ZOOV4OKm_7';
@@ -17,26 +23,34 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
     if ($responseData->success) {
         try {
             //Server settings
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-            $mail->isSMTP();                                            // Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'hothson@gmail.com';                     // SMTP username
-            $mail->Password   = 'Tesla@33';                               // SMTP password
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-            $mail->Port       = 587;                                 // TCP port to connect to
+            $mail = new PHPMailer(true);
+            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                
+            $mail->isSMTP();
+            $mail->Host       = MAIL_HOST;                    
+            $mail->SMTPAuth   = MAIL_SMTPAuth;
+            $mail->Username   = MAIL_USERNAME;                     
+            $mail->Password   = MAIL_PASSWORD;                               
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
+            $mail->Port       = MAIL_PORT;                                 
 
             //Recipients
-            $mail->setFrom('son.hothanh@mor.com.vn', 'Mor');
-            $mail->addAddress('hothson@gmail.com', 'Ho Thanh Son');     // Add a recipient
+            $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
+            $mail->addAddress(MAIL_TO, MAIL_TO_NAME);     // Add a recipient
 
             // Content
-            $mail->isHTML(true);                                  // Set email format to HTML
-            $mail->Subject = 'Here is the subject';
-            $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+            $mail->isHTML(true);                          
+            $mail->Subject = $subject ?? 'Somebody contact you';
+            $body = '<h4>The persion with following infomation has contacted you</h4>'
+                . '<span>Name: ' . $name . '</span><br>'
+                . '<span>Company Name: ' . $companyName . '</span><br>'
+                . '<span>Mail: ' . $email . '</span><br>'
+                . '<span>Subject: ' . $subject . '</span><br>'
+                . '<span>Content: ' . $requirement . '</span><br>';
+            $mail->Body    = $body;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
+
             session_start();
             $_SESSION['success'] = 'Your contact request have submitted successfully.';
             header("Location: http://mor.test/#contact");
@@ -45,7 +59,7 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
         }
     } else {
         session_start();
-        $_SESSION['error'] = 'Robot verification failed, please try again.';
+        $_SESSION['error'] = 'Cannot send mail!';
     }
 } else {
     session_start();
