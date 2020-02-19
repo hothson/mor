@@ -326,9 +326,8 @@
 }
 
 .contact-area {
-    height: 700px;
+    height: auto;
     background-color: #0C3C60;
-    color: #0C3C60;
 }
 
 .contact-area input::placeholder, .contact-area textarea::placeholder {
@@ -339,6 +338,14 @@
     color: white;
     background-color: #39729B;
     float: right;
+}
+
+.contact-area .text {
+    color: white;
+}
+
+.contact-area .text a:hover {
+    text-decoration: none;
 }
 
 @media (max-width: 992px) {

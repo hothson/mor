@@ -22,7 +22,7 @@
 
 <body>
     <?php
-        session_start();
+    session_start();
     ?>
     <!-- MainMenu-Area -->
     <section class="mainmenu-area">
@@ -281,32 +281,55 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                    <form method="POST" action="function.php">
-                        <?php if (isset($_SESSION['success'])) {?>
+                    <form method="POST" action="function.php" class="needs-validation" novalidate>
+                        <?php if (isset($_SESSION['success'])) { ?>
                             <div class="alert alert-success" role="alert">
-                                <?php echo($_SESSION['success']); ?>
+                                <?php echo ($_SESSION['success']); ?>
                             </div>
                         <?php } ?>
-                        <?php if (isset($_SESSION['error'])) {?>
+                        <?php if (isset($_SESSION['error'])) { ?>
                             <div class="alert alert-danger" role="alert">
-                                <?php echo($_SESSION['error']); ?> 
+                                <?php echo ($_SESSION['error']); ?>
                             </div>
                         <?php } ?>
                         <?php session_destroy(); ?>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="お名前" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="お名前" required pattern=".{3,}">
+                            <div class="invalid-feedback">
+                                Name is min 3 letter.
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="company-name" name="company-name" placeholder="会社名" required>
+                            <input type="text" class="form-control" id="company-name" name="company-name" placeholder="会社名" required pattern=".{3,}">
+                            <div class="invalid-feedback">
+                                Company Name is min 3 letter.
+                            </div>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレス" required>
+                            <div class="invalid-feedback">
+                                Enter valid email
+                            </div>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="件名">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください" required></textarea>
+                            <textarea class="form-control" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください" required pattern=".{3,}"></textarea>
+                            <div class="invalid-feedback">
+                                Content need at least 3 letters
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    <span class="text"><a href="" data-toggle="modal" data-target="#exampleModalLong">利用規約</a> に同意する</span>
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="g-recaptcha" data-sitekey="6Lca19kUAAAAABFBPIvE3-wBBx5KDdkS0mYhk8om" required></div>
