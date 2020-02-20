@@ -26,7 +26,7 @@
     ?>
     <!-- MainMenu-Area -->
     <section class="mainmenu-area">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light custom" id="menu-bar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark custom" id="menu-bar">
             <div class="container">
                 <img class="navbar-brand custom" src="images/MorLogoWhite.png" alt="">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -2,25 +2,27 @@
     font-family: "mattisse";
     src: url("fonts/mattisse/Mattisse Personal Use.ttf");
 } */
-@media (min-width: 992px) {
+
+@media (max-width: 575.98px) {
     .navbar-brand.custom {
-        height: 35px;
+        height: 28px;
+        width: 100px;
     }
 }
 @media (min-width: 576px) {
     .navbar-brand.custom {
         height: 28px;
+        width: 130px
     }
 }
 
-@media (max-width: 575.98px) {
+@media (min-width: 992px) {
     .navbar-brand.custom {
-        height: 28px;
+        height: 35px;
     }
 }
 
-
-.mainmenu-area .bg-light.custom {
+.mainmenu-area .navbar.custom {
     background-color: #103C60 !important;
     width: 100%;
     position: fixed;
@@ -32,7 +34,7 @@
     margin-left: auto;
 }
 
-.navbar-light .navbar-nav .nav-link.custom {
+.navbar-dark .navbar-nav .nav-link.custom {
     padding: 29px;
     color: #D1E0EB;
     font-size: 14px;
@@ -101,7 +103,7 @@
 
 @media (max-width: 575.98px) {
     .video-area {
-        height: 282px;
+        height: 229px;
         padding-top: 56px;
     }
 
@@ -138,7 +140,7 @@
     }
 
     .vision-content h6 {
-        padding-top: 0px;
+        padding-top: 8px;
         font-size: 23px;
     }
 
@@ -165,6 +167,14 @@
     .video img {
         top: 39%;
     }
+
+    .video-area .vision-content {
+        height: 133px;
+    }
+
+    .vision-content h6 {
+        padding-top: 24px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -178,13 +188,24 @@
     }
 }
 
+@media (max-width: 575.98px) {
+    .header-text {
+        font-size: 29px;
+    }
+}
+
+@media (min-width: 576px) {
+    .header-text {
+        font-size: 49px
+    }
+}
+
 .header-text {
     color: #39729B;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 32px;
     font-family: 'Roboto', sans-serif;
-    font-size: 49px
 }
 
 .service-area .service-col h1 {
@@ -202,7 +223,7 @@
 
 @media (max-width: 575.98px) {
     .service-area .service-col {
-        height: 272px;
+        height: 291px;
         margin-bottom: 20px;
     }
 
@@ -228,7 +249,7 @@
     }
 
     .service-area {
-        height: 593px;
+        height: 532px;
     }
 }
 
@@ -304,7 +325,7 @@
 }
 
 .access-area {
-    height: 605px;
+    height: 642px;
     background-color: #FFFFFF;
 }
 
@@ -328,6 +349,7 @@
 .contact-area {
     height: auto;
     background-color: #0C3C60;
+    position: relative;
 }
 
 .contact-area input::placeholder, .contact-area textarea::placeholder {
@@ -347,12 +369,38 @@
 .contact-area .text a:hover {
     text-decoration: none;
 }
-
-@media (max-width: 992px) {
+@media (max-width: 575.98px) {
+    .contact-area .header-text {
+        padding-top: 20px;
+    }
+}
+@media (min-width: 576px) {
     .contact-area .header-text {
         padding-top: 0px;
     }
 }
+
+@media (min-width: 768px) {
+    .contact-area .custom {
+        position: absolute;
+        bottom: 92px;
+        right: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact-area .header-text {
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-area .custom {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
 .footer-area {
     height: 194px;
     background-color: #fff;
