@@ -1,5 +1,4 @@
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -7,26 +6,47 @@ use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
 include 'config.php';
 
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $companyName = $_POST['company-name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $requirement = $_POST['requirement'];
-}
+class Contact
+{
+    public function submitContact() {
+        if (isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $companyName = $_POST['company-name'];
+            $email = $_POST['email'];
+            $subject = $_POST['subject'];
+            $requirement = $_POST['requirement'];
+        }
+        $responseData = $this->checkRecaptcha($_POST['g-recaptcha-response']);
 
-if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-    $secret = '6Lca19kUAAAAAIr5Zv2x1UE0D2pFA2ZOOV4OKm_7';
-    $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
-    $responseData = json_decode($verifyResponse);
+        if ($responseData) {
+            $this->sendMail($name, $companyName, $email, $subject, $requirement);
+        } else {
+            session_start();
+            $_SESSION['error'] = 'Robot verification failed, please try again.';
+            return $this->redirectPage();
+        }
+    }
 
-    if ($responseData->success) {
+    public function redirectPage() {
+        return header("Location: http://mor.test/#contact");
+    }
+
+    private function checkRecaptcha($recaptcha) {
+        
+            $secret = RECAPTCHA_SECRET_KEY;
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $recaptcha);
+            $responseData = json_decode($verifyResponse);
+
+            return $responseData->success;
+    }
+
+    public function sendMail($name, $companyName, $email, $subject, $requirement) {
         try {
             //Server settings
             $mail = new PHPMailer(true);
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER;                
+            //$mail->SMTPDebug = SMTP::DEBUG_SERVER    
             $mail->isSMTP();
-            $mail->Host       = MAIL_HOST;                    
+            $mail->Host       = MAIL_HOST;                  
             $mail->SMTPAuth   = MAIL_SMTPAuth;
             $mail->Username   = MAIL_USERNAME;                     
             $mail->Password   = MAIL_PASSWORD;                               
@@ -35,7 +55,8 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
 
             //Recipients
             $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
-            $mail->addAddress(MAIL_TO, MAIL_TO_NAME);     // Add a recipient
+            // Add a recipient
+            $mail->addAddress(MAIL_TO, MAIL_TO_NAME);
 
             // Content
             $mail->isHTML(true);                          
@@ -50,19 +71,19 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-
             session_start();
             $_SESSION['success'] = 'Your contact request have submitted successfully.';
-            header("Location: http://mor.test/#contact");
+            
+            return $this->redirectPage();
         } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            session_start();
+            $_SESSION['error'] = "Mailer is not working!";
+            echo("Mailer Error: {$mail->ErrorInfo}");
+
+            return $this->redirectPage();
         }
-    } else {
-        session_start();
-        $_SESSION['error'] = 'Cannot send mail!';
     }
-} else {
-    session_start();
-    $_SESSION['error'] = 'Robot verification failed, please try again.';
-    header("Location: http://mor.test/#contact");
 }
+
+$contact = new Contact();
+$contact->submitContact();
