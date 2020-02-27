@@ -2,7 +2,9 @@
     font-family: "mattisse";
     src: url("fonts/mattisse/Mattisse Personal Use.ttf");
 } */
-
+html, body {
+    position: relative;
+}
 @media (max-width: 575.98px) {
     .navbar-brand.custom {
         height: 28px;
@@ -18,7 +20,8 @@
 
 @media (min-width: 992px) {
     .navbar-brand.custom {
-        height: 35px;
+        height: 36px;
+        width: 168px;
     }
 }
 
@@ -27,6 +30,7 @@
     width: 100%;
     position: fixed;
     z-index: 999;
+    height: 89px;
 }
 
 .navbar-nav {
@@ -35,7 +39,6 @@
 }
 
 .navbar-dark .navbar-nav .nav-link.custom {
-    padding: 29px;
     color: #D1E0EB;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -51,7 +54,7 @@
 }
 
 .navbar-nav>li {
-    padding-left: 25px;
+    margin-left: 20px;
 }
 
 .mainmenu-area .custom.navbar>li>a:hover {
@@ -174,6 +177,10 @@
 
     .vision-content h6 {
         padding-top: 24px;
+    }
+
+    .vision-content h3 {
+        font-size: 58px;
     }
 }
 
@@ -402,7 +409,6 @@
 }
 
 .footer-area {
-    height: 194px;
     background-color: #fff;
 }
 
@@ -422,37 +428,62 @@
 
 .copyright-text {
     text-align: center;
-    padding: 21px;
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .right-content {
     position: relative;
 }
 
-.footer-content .right-content .privacy {
-    color: #154465;
-    float: right;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    position: absolute;
-    right: 0;
-    top: 10px;
-}
-
 .footer-content .footer-text {
     padding-top: 15px;
-}
-
-.footer-content .right-content .social {
-    float: right;
-    margin-left: 10px;
-    color: #154465;
 }
 
 .footer-content {
     font-family: 'Roboto', sans-serif;
 }
+
+@media (max-width: 991.98px) {
+    .footer-content .right-content {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .footer-content .footer-text span {
+        margin-top: 10px;
+        letter-spacing: 1px;
+    }
+
+    .footer-content .footer-text {
+        text-align: center;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-content .right-content .social {
+        float: right;
+        margin-left: 10px;
+        color: #154465;
+    }
+
+    .footer-content .right-content .privacy {
+        color: #154465;
+        float: right;
+        margin-top: 20px;
+        padding-bottom: 10px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        cursor: pointer;
+    }
+}
+
 
 #exampleModalLong {
     font-family: 'Roboto', sans-serif;

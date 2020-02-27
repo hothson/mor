@@ -6,6 +6,8 @@ $(document).ready(function(){
     $('html, body').animate({
       scrollTop: $(hash).offset().top - $("#menu-bar").height()
     }, 800);
+
+    return false;
   });
 });
 

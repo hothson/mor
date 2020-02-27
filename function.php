@@ -8,6 +8,8 @@ include 'config.php';
 
 class Contact
 {
+    public $url = "http://morasia.mor.com.vn/#contact";
+
     public function submitContact() {
         if (isset($_POST['submit'])) {
             $name = $_POST['name'];
@@ -28,7 +30,7 @@ class Contact
     }
 
     public function redirectPage() {
-        return header("Location: http://mor.test/#contact");
+        return header("Location: " . $this->url);
     }
 
     private function checkRecaptcha($recaptcha) {

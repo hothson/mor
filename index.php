@@ -17,12 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- Main-Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
 </head>
 
 <body>
     <?php
-    session_start();
+        session_start();
     ?>
     <!-- MainMenu-Area -->
     <section class="mainmenu-area">
@@ -60,9 +60,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="video">
-                    <video autoplay loop>
-                        <source src="videos/World - 1992.mp4" type="video/mp4">
-                    </video>
+                    <!-- <video autoplay loop>
+                        <source id="video" src="videos/World - 1992.mp4" type="video/mp4">
+                    </video> -->
                     <img src="images/logo_plus_slogan.png" alt="">
                 </div>
             </div>
@@ -138,11 +138,11 @@
     <section class="about-area" id="about-us">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
                     <h1 class="header-text">ABOUT US</h1>
                 </div>
-                <div class="col-sm-4"></div>
+                <div class="col-sm-3"></div>
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6">
@@ -294,30 +294,31 @@
                         <?php } ?>
                         <?php session_destroy(); ?>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="お名前" required pattern=".{3,}">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="お名前" value="<?php if (isset($_POST['name'])) echo $_POST['name'];?>" required>
                             <div class="invalid-feedback">
-                                Name is min 3 letter.
+                            入力必須の項目が入力されていない
+
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="company-name" name="company-name" placeholder="会社名" required pattern=".{3,}">
+                            <input type="text" class="form-control" id="company-name" name="company-name" placeholder="会社名" required>
                             <div class="invalid-feedback">
-                                Company Name is min 3 letter.
+                                入力必須の項目が入力されていない
                             </div>
                         </div>
                         <div class="form-group">
                             <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレス" required>
                             <div class="invalid-feedback">
-                                Enter valid email
+                                <span>入力されたメールアドレスの形式が正しくない。</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="件名">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください" required pattern=".{3,}"></textarea>
+                            <textarea class="form-control" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください" required></textarea>
                             <div class="invalid-feedback">
-                                Content need at least 3 letters
+                                入力必須の項目が入力されていない
                             </div>
                         </div>
                         <div class="form-group">
@@ -327,12 +328,12 @@
                                     <span class="text"><a href="" data-toggle="modal" data-target="#exampleModalLong">利用規約</a> に同意する</span>
                                 </label>
                                 <div class="invalid-feedback">
-                                    You must agree before submitting.
+                                「利用規約に同意する」にチェックしてください
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6Lca19kUAAAAABFBPIvE3-wBBx5KDdkS0mYhk8om" required></div>
+                            <div class="g-recaptcha" data-sitekey="6LeKvtwUAAAAAOjB93M0YthOK28hfE3A1hqhJUse" required></div>
                             <button type="submit" name="submit" class="btn btn-primary custom">送信</button>
                         </div>
                     </form>
@@ -353,10 +354,9 @@
                     </div>
                     <div class="footer-content">
                         <div class="row">
-                            <div class="col-sm-2">
+                            <div class="col-sm-12">
                                 <img src="images/MorLogoBlack.png" alt="">
                             </div>
-                            <div class="col-sm-8"></div>
                         </div>
                         <div class="row">
                             <div class="col-lg-8 col-sm-12">
@@ -364,18 +364,15 @@
                                     <span>住所 &nbsp; &nbsp; &nbsp; <span>〒171-0022</span></span>
                                     <br>
                                     <span>東京都豊島区南池袋2-9-3 サンビルディング4階</span>
+                                    <br>
+                                    <span>​03-5924-6616</span>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-12">
                                 <div class="right-content">
                                     <div class="social">
-                                        <span>​03-5924-6616</span>
-                                        <span>
-                                            <a><i class="fa fa-youtube custom"></i></a>
-                                        </span>
-                                        <span>
-                                            <a><i class="fa fa-facebook-square custom"></i></a>
-                                        </span>
+                                        <a href="https://www.youtube.com/watch?v=AfPo1u25d8A" target="_blank"><i class="fa fa-youtube custom"></i></a>
+                                        <a href="https://www.facebook.com/morjsc/" target="_blank"><i class="fa fa-facebook-square custom"></i></a>
                                     </div>
                                     <div class="privacy">
                                         <span data-toggle="modal" data-target="#exampleModalLong">Privacy Policy</span>
@@ -448,6 +445,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!--Main-active-JS-->
     <script src="js/main.js"></script>
+    <script src="js/baobav.js"></script>
+    <script>
+        bav("body").play({
+                "videos":["videos/World - 1992.mp4"]
+            },{
+                parallax: true,
+                loopMode: 'repeatLast'});
+    </script>
 </body>
 
 </html>
