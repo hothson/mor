@@ -155,8 +155,10 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">住所</th>
-                                    <td>〒171-0022<br>
-                                        ​ 京都豊島区南池袋2-9-3 サンビルディング4階</td>
+                                    <td>
+                                        〒171-0022
+                                        <br>
+                                        ​ 東京都豊島区南池袋2-9-3 サンビルディング4階</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">設立</th>
@@ -172,7 +174,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">従業員数</th>
-                                    <td colspan="2">6人　グループ全体150人(アルバイト含む)</td>
+                                    <td colspan="2">18人　グループ全体162人(契約社員、アルバイト含む)</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="th-custom">グループ会社</th>
@@ -180,13 +182,18 @@
                                         MOR Software JSC / ベトナム ホーチミンオフィス <br>
                                         7F, 385 To Hien Thanh, 14 Ward, 10 District, Ho Chi Minh City, Vietnam
                                         <br>
+                                        <a href="https://mor.vn">https://mor.vn</a>
+                                        <br>
                                         <br>
                                         MOR Hanoi Branch / ベトナム ハノイオフィス <br>
                                         6F, CT1 Tower, Bac Ha C14 Building, To Huu Street, Hanoi, Vietnam
                                         <br>
+                                        <a href="https://mor.vn">https://mor.vn</a>
+                                        <br>
                                         <br>
                                         MOR Technology Creative / ベトナム ダナンオフィス <br>
                                         4F, BYB Building, 166 Le Do Street, Da Nang, Vietnam
+                                        <a href="https://mor.vn">https://mor.vn</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -274,7 +281,7 @@
             <div class="row">
                 <div class="col-sm-4"></div>
                 <div class="col-sm-4">
-                    <h1 class="header-text">​CONTACT</h1>
+                    <h1 class="header-text contact">​CONTACT</h1>
                 </div>
                 <div class="col-sm-4"></div>
             </div>
@@ -293,21 +300,24 @@
                             </div>
                         <?php } ?>
                         <?php session_destroy(); ?>
-                        <div class="form-group">
+                        <div class="form-group input-holder">
                             <input type="text" class="form-control" id="name" name="name" placeholder="お名前" value="<?php if (isset($_POST['name'])) echo $_POST['name'];?>" required>
+                            <span class="required-symbol required-symbol-1">※</span>
                             <div class="invalid-feedback">
                             入力必須の項目が入力されていない
 
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group input-holder">
                             <input type="text" class="form-control" id="company-name" name="company-name" placeholder="会社名" required>
+                            <span class="required-symbol required-symbol-2">※</span>
                             <div class="invalid-feedback">
                                 入力必須の項目が入力されていない
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group input-holder">
                             <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレス" required>
+                            <span class="required-symbol required-symbol-3">※</span>
                             <div class="invalid-feedback">
                                 <span>入力されたメールアドレスの形式が正しくない。</span>
                             </div>
@@ -315,11 +325,18 @@
                         <div class="form-group">
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="件名">
                         </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください" required></textarea>
+                        <div class="form-group input-holder">
+                            <textarea class="form-control required-textarea" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください" required></textarea>
+                            <!-- <span class="required-symbol required-symbol-4">※</span> -->
                             <div class="invalid-feedback">
                                 入力必須の項目が入力されていない
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="required-text"><span>※必須項目</span></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="submit" class="btn btn-primary custom">送信</button>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -328,13 +345,12 @@
                                     <span class="text"><a href="" data-toggle="modal" data-target="#exampleModalLong">利用規約</a> に同意する</span>
                                 </label>
                                 <div class="invalid-feedback">
-                                「利用規約に同意する」にチェックしてください
+                                    「利用規約に同意する」にチェックしてください
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="g-recaptcha" data-sitekey="6LeKvtwUAAAAAOjB93M0YthOK28hfE3A1hqhJUse" required></div>
-                            <button type="submit" name="submit" class="btn btn-primary custom">送信</button>
                         </div>
                     </form>
                 </div>
@@ -392,7 +408,7 @@
                                                 <div class="modal-body">
                                                     <h3>1．基本方針</h3>
                                                     <p>
-                                                        株式会社モアソフトウエア(以下｢当社｣)は、業務を遂行するうえで、当社に従事する者は、個人情報の保護を重要な責務であることを認識し、個人情報を正確かつ安全に取り扱います。
+                                                        株式会社モアアジア(以下｢当社｣)およびその関連会社は、業務を遂行するうえで、当社に従事する者は、個人情報の保護を重要な責務であることを認識し、個人情報を正確かつ安全に取り扱います。
                                                     </p>
                                                     <h3>2．法令等の遵守</h3>
                                                     <p>

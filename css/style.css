@@ -7,8 +7,8 @@ html, body {
 }
 @media (max-width: 575.98px) {
     .navbar-brand.custom {
-        height: 28px;
-        width: 100px;
+        height: 30px;
+        width: 140px;
     }
 }
 @media (min-width: 576px) {
@@ -112,6 +112,7 @@ html, body {
 
     .video img {
         width: 118px;
+        top: 49%;
     }
 
     .video-area .vision-content {
@@ -135,7 +136,6 @@ html, body {
 
     .video img {
         width: 242px;
-        top: 31%;
     }
 
     .video-area .vision-content {
@@ -376,28 +376,10 @@ html, body {
 .contact-area .text a:hover {
     text-decoration: none;
 }
-@media (max-width: 575.98px) {
-    .contact-area .header-text {
-        padding-top: 20px;
-    }
-}
-@media (min-width: 576px) {
-    .contact-area .header-text {
-        padding-top: 0px;
-    }
-}
 
-@media (min-width: 768px) {
-    .contact-area .custom {
-        position: absolute;
-        bottom: 92px;
-        right: 16px;
-    }
-}
-
-@media (min-width: 992px) {
-    .contact-area .header-text {
-        padding-top: 20px;
+@media (max-width: 991.98px) {
+    .contact-area .header-text.contact {
+        margin-top: -56px;
     }
 }
 
@@ -405,6 +387,12 @@ html, body {
     .contact-area .custom {
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .contact-area .header-text.contact {
+        margin-top: 0;
     }
 }
 
@@ -497,4 +485,83 @@ html, body {
 
 #exampleModalLong span {
     float: right;
+}
+
+.contact-area .required-text {
+    float: right;
+    color: red;
+}
+
+.input-holder {
+    position: relative;
+}
+
+.required-symbol {
+    position: absolute;
+    color: red;
+    top: 0px;
+}
+
+.required-symbol-1 {
+    left: 64px;
+}
+
+.required-symbol-2 {
+    left: 64px;
+}
+
+.required-symbol-3 {
+    left: 124px;
+}
+
+
+@media (max-width: 575.98px) {
+    .required-symbol-4 {
+        left: 334px;
+        top: 0;
+    } 
+}
+
+@media (max-width: 375px) {
+    .required-symbol-4 {
+        left: 318px;
+        top: 0;
+    } 
+}
+
+@media (min-width: 576px) {
+    .required-symbol-4 {
+        left: 32px;
+        top: 26px;
+    }   
+}
+
+@media (min-width: 768px) {
+    .required-symbol-4 {
+        left: 334px;
+        top: 0;
+    } 
+}
+
+/* .input-holder textarea::placeholder{
+    color: red;
+    content: "※";
+    /* visibility: visible; */
+/* } */ 
+
+
+::-webkit-input-placeholder:after {
+    content: '*';
+ }
+ 
+ :-moz-placeholder:after { /* Firefox 18- */
+    content: '*'; 
+ }
+ 
+ ::-moz-placeholder:after {  /* Firefox 19+ */
+    content: '*';
+ }
+ 
+ :-ms-input-placeholder:after {  
+    content: '*';
 }
