@@ -30,7 +30,6 @@ html, body {
     width: 100%;
     position: fixed;
     z-index: 999;
-    height: 89px;
 }
 
 .navbar-nav {
@@ -489,79 +488,17 @@ html, body {
 
 .contact-area .required-text {
     float: right;
-    color: red;
+    color: #fff;
 }
 
-.input-holder {
+.contact-area .contact-form {
     position: relative;
 }
 
-.required-symbol {
-    position: absolute;
-    color: red;
-    top: 0px;
-}
-
-.required-symbol-1 {
-    left: 64px;
-}
-
-.required-symbol-2 {
-    left: 64px;
-}
-
-.required-symbol-3 {
-    left: 124px;
-}
-
-
-@media (max-width: 575.98px) {
-    .required-symbol-4 {
-        left: 334px;
-        top: 0;
-    } 
-}
-
-@media (max-width: 375px) {
-    .required-symbol-4 {
-        left: 318px;
-        top: 0;
-    } 
-}
-
-@media (min-width: 576px) {
-    .required-symbol-4 {
-        left: 32px;
-        top: 26px;
-    }   
-}
-
 @media (min-width: 768px) {
-    .required-symbol-4 {
-        left: 334px;
-        top: 0;
-    } 
-}
-
-/* .input-holder textarea::placeholder{
-    color: red;
-    content: "※";
-    /* visibility: visible; */
-/* } */ 
-
-
-::-webkit-input-placeholder:after {
-    content: '*';
- }
- 
- :-moz-placeholder:after { /* Firefox 18- */
-    content: '*'; 
- }
- 
- ::-moz-placeholder:after {  /* Firefox 19+ */
-    content: '*';
- }
- 
- :-ms-input-placeholder:after {  
-    content: '*';
+    .contact-area button.custom {
+        position: absolute;
+        right: 0;
+        bottom: 3px;
+    }
 }

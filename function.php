@@ -25,6 +25,7 @@ class Contact
         } else {
             session_start();
             $_SESSION['error'] = 'Robot verification failed, please try again.';
+            
             return $this->redirectPage();
         }
     }
@@ -58,7 +59,8 @@ class Contact
             //Recipients
             $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
             // Add a recipient
-            $mail->addAddress(MAIL_TO, MAIL_TO_NAME);
+            $mail->addAddress(MAIL_TO, MAIL_TO_NAME);    
+            // $mail->addAddress(MAIL_TO_TEST, MAIL_TO_NAME);
 
             // Content
             $mail->isHTML(true);                          
