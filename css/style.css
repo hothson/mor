@@ -284,7 +284,6 @@ html, body {
 }
 
 .news-area {
-    height: 400px;
     background-color: #FFFFFF;
 }
 
@@ -318,20 +317,8 @@ html, body {
     padding-left: 15px;
 }
 
-@media (min-width: 992px) {
-    .about-area {
-    height: 906px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .about-area {
-        height: 786px;
-    }
-}
-
 .access-area {
-    height: 642px;
+    padding-bottom: 25px;
     background-color: #FFFFFF;
 }
 
@@ -356,6 +343,7 @@ html, body {
     height: auto;
     background-color: #0C3C60;
     position: relative;
+    padding-bottom: 20px;
 }
 
 .contact-area input::placeholder, .contact-area textarea::placeholder {
@@ -501,4 +489,15 @@ html, body {
         right: 0;
         bottom: 3px;
     }
+}
+
+
+.g-recaptcha-error {
+    color: #dc3545;
+    margin-top: 2px;
+    font-size: 80%;
+}
+
+.news-area .news {
+    margin-bottom: 35px;
 }

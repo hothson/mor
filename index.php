@@ -288,7 +288,8 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                    <form method="POST" action="function.php" class="needs-validation contact-form" novalidate>
+                    <form method="POST" action="function.php" class="needs-validation contact-form" novalidate
+                        onsubmit="submitUserForm();">
                         <?php if (isset($_SESSION['success'])) { ?>
                             <div class="alert alert-success" role="alert">
                                 <?php echo ($_SESSION['success']); ?>
@@ -301,29 +302,30 @@
                         <?php } ?>
                         <?php session_destroy(); ?>
                         <div class="form-group input-holder">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="お名前※" value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="お名前※" value="<?php echo isset($_SESSION['post_data']) ? $_SESSION['post_data']['name'] : ''; ?>" required>
                             <!-- <span class="required-symbol required-symbol-1">※</span> -->
                             <div class="invalid-feedback">
                                 入力必須の項目が入力されていない
                             </div>
                         </div>
                         <div class="form-group input-holder">
-                            <input type="text" class="form-control" id="company-name" name="company-name" placeholder="会社名※" required>
+                            <input type="text" class="form-control" id="company-name" name="company-name" placeholder="会社名※" value="<?php echo isset($_SESSION['post_data']) ? $_SESSION['post_data']['company-name'] : ''; ?>" required>
                             <div class="invalid-feedback">
                                 入力必須の項目が入力されていない
                             </div>
                         </div>
                         <div class="form-group input-holder">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレス※" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="メールアドレス※" value="<?php echo isset($_SESSION['post_data']) ? $_SESSION['post_data']['email'] : ''; ?>" required>
+
                             <div class="invalid-feedback">
                                 <span>入力されたメールアドレスの形式が正しくない。</span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="件名">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="件名" value="<?php echo isset($_SESSION['post_data']) ? $_SESSION['post_data']['subject'] : ''; ?>">
                         </div>
                         <div class="form-group input-holder">
-                            <textarea class="form-control required-textarea" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください※" required></textarea>
+                            <textarea class="form-control required-textarea" id="requirement" rows="3" name="requirement" placeholder="ここにお問い合わせ内容を入力してください※" required><?php echo isset($_SESSION['post_data']) ? htmlspecialchars($_SESSION['post_data']['requirement']) : ''; ?></textarea>
                             <div class="invalid-feedback">
                                 入力必須の項目が入力されていない
                             </div>
@@ -343,7 +345,13 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6LeKvtwUAAAAAOjB93M0YthOK28hfE3A1hqhJUse" required></div>
+                            <div class="g-recaptcha" data-callback="verifyCaptcha" data-sitekey="6LeKvtwUAAAAAOjB93M0YthOK28hfE3A1hqhJUse"></div>
+                            <div id="g-recaptcha-error" class="g-recaptcha-error"></div>
+                            <?php if (isset($_SESSION['captcha_error'])) { ?>
+                            <div class="g-recaptcha-error">
+                                <?php echo ($_SESSION['captcha_error']); ?>
+                            </div>
+                        <?php } ?>
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary custom">送信</button>
                     </form>

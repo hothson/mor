@@ -28,3 +28,19 @@ $(document).ready(function(){
     });
   }, false);
 })();
+
+// function submitUserForm() {
+//   var response = grecaptcha.getResponse();
+//   alert(response);
+//   if (response.length == 0) {
+//     alert(111);
+//     document.getElementById('g-recaptcha-error').innerHTML = '<span>Google recaptcha is required</span>';
+
+//     return false;
+//   }
+//   return true;
+// }
+
+// function verifyCaptcha() {
+//   document.getElementById('g-recaptcha-error').innerHTML = '';
+// }

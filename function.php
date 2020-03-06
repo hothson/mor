@@ -24,7 +24,8 @@ class Contact
             $this->sendMail($name, $companyName, $email, $subject, $requirement);
         } else {
             session_start();
-            $_SESSION['error'] = 'Robot verification failed, please try again.';
+            $_SESSION['captcha_error'] = 'Robot verification failed, please try again.';
+            $_SESSION['post_data'] = $_POST;
             
             return $this->redirectPage();
         }
