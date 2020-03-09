@@ -48,11 +48,11 @@ class Contact
         try {
             //Server settings
             $mail = new PHPMailer(true);
-            //$mail->SMTPDebug = SMTP::DEBUG_SERVER    
+            // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
             $mail->Host       = MAIL_HOST;                  
             $mail->SMTPAuth   = MAIL_SMTPAuth;
-            $mail->Username   = MAIL_USERNAME;                     
+            $mail->Username   = MAIL_USERNAME;          
             $mail->Password   = MAIL_PASSWORD;                               
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
             $mail->Port       = MAIL_PORT;                                 
@@ -83,7 +83,8 @@ class Contact
         } catch (Exception $e) {
             session_start();
             $_SESSION['error'] = "Mailer is not working!";
-            echo("Mailer Error: {$mail->ErrorInfo}");
+            
+            error_log("Error info: $mail->ErrorInfo", 3, "/var/www/html/mor_landing_page/logs/my-errors.log");
 
             return $this->redirectPage();
         }
