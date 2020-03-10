@@ -11,6 +11,7 @@ class Contact
     public $url = "http://morasia.mor.com.vn/#contact";
 
     public function submitContact() {
+        error_log("Form is Submited." . "\n", 3, "logs/my-errors.log");
         if (isset($_POST['submit'])) {
             $name = $_POST['name'];
             $companyName = $_POST['company-name'];
@@ -19,7 +20,7 @@ class Contact
             $requirement = $_POST['requirement'];
         }
         $responseData = $this->checkRecaptcha($_POST['g-recaptcha-response']);
-
+        error_log("Check recaptcha: " . $responseData . "\n", 3, "logs/my-errors.log");
         if ($responseData) {
             $this->sendMail($name, $companyName, $email, $subject, $requirement);
         } else {
@@ -46,26 +47,46 @@ class Contact
 
     public function sendMail($name, $companyName, $email, $subject, $requirement) {
         try {
+            error_log("Start sending mail" . "\n", 3, "logs/my-errors.log");
+
             //Server settings
             $mail = new PHPMailer(true);
             // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
-            $mail->Host       = MAIL_HOST;                  
-            $mail->SMTPAuth   = MAIL_SMTPAuth;
-            $mail->Username   = MAIL_USERNAME;          
-            $mail->Password   = MAIL_PASSWORD;                               
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
-            $mail->Port       = MAIL_PORT;                                 
+            
+            $mail->Host       = MAIL_HOST;
+            error_log("Mail Host: " . $mail->Host . "\n", 3, "logs/my-errors.log");
 
+            $mail->SMTPAuth   = MAIL_SMTPAuth;
+            error_log("MAIL_SMTPAuth: " . $mail->SMTPAuth . "\n", 3, "logs/my-errors.log");                
+
+            $mail->Username   = MAIL_USERNAME;  
+            error_log("MAIL_USERNAME: " . $mail->Username . "\n", 3, "logs/my-errors.log");                
+
+            $mail->Password   = MAIL_PASSWORD;
+            error_log("MAIL_PASSWORD: " . $mail->Password . "\n", 3, "logs/my-errors.log");                
+
+            error_log("Username, Password are authenticated" . "\n", 3, "logs/my-errors.log");
+
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+
+            $mail->Port       = MAIL_PORT;
+            error_log("MAIL_PORT: " . $mail->Port . "\n", 3, "logs/my-errors.log");
+            error_log("Mail server authenticated" . "\n", 3, "logs/my-errors.log");
+            
             //Recipients
+            error_log("MAIL_FROM: " . MAIL_FROM . "\n", 3, "logs/my-errors.log");
             $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
             // Add a recipient
-            $mail->addAddress(MAIL_TO, MAIL_TO_NAME);    
-            // $mail->addAddress(MAIL_TO_TEST, MAIL_TO_NAME);
+            $mail->addAddress(MAIL_TO, MAIL_TO_NAME);
+            error_log("MAIL_TO: " . MAIL_TO . "\n", 3, "logs/my-errors.log");
 
+            $mail->addAddress(MAIL_TO_TEST, MAIL_TO_NAME);
+            error_log("Added emails" . "\n", 3, "logs/my-errors.log");
             // Content
             $mail->isHTML(true);                          
             $mail->Subject = $subject ?? 'Somebody contact you';
+            error_log("Subject: " . $mail->Subject . "\n", 3, "logs/my-errors.log");
             $body = '<h4>The persion with following infomation has contacted you</h4>'
                 . '<span>Name: ' . $name . '</span><br>'
                 . '<span>Company Name: ' . $companyName . '</span><br>'
@@ -74,17 +95,18 @@ class Contact
                 . '<span>Content: ' . $requirement . '</span><br>';
             $mail->Body    = $body;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
+            error_log("Body: " . $mail->Body . "\n", 3, "logs/my-errors.log");
             $mail->send();
             session_start();
             $_SESSION['success'] = 'Your contact request have submitted successfully.';
+            error_log("Mail is sent" . "\n", 3, "logs/my-errors.log");
             
             return $this->redirectPage();
         } catch (Exception $e) {
             session_start();
             $_SESSION['error'] = "Mailer is not working!";
             
-            error_log("Error info: $mail->ErrorInfo", 3, "/var/www/html/mor_landing_page/logs/my-errors.log");
+            error_log("Error info: $mail->ErrorInfo", 3, "logs/my-errors.log");
 
             return $this->redirectPage();
         }

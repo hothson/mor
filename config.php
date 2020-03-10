@@ -9,5 +9,5 @@
     define('MAIL_FROM', 'ishothson@gmail.com');
     define('MAIL_FROM_NAME', 'MOR ASIA');
     define('MAIL_TO', 'contact@mor.vn');
-    // define('MAIL_TO_TEST', 'ishothson@gmail.com');
+    define('MAIL_TO_TEST', 'ishothson@gmail.com');
     define('MAIL_TO_NAME', 'MOR ASIA');

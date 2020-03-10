@@ -1,3 +1,33 @@
-[09-Mar-2020 09:44:20 Asia/Krasnoyarsk] Mail error
-[09-Mar-2020 09:45:32 Asia/Krasnoyarsk] Error info: SMTP Error: Could not authenticate.
-Error info: SMTP Error: Could not authenticate.
+Form is Submited.
+Check recaptcha: 1
+Start sending mail
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: 
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@mor.vn
+Added emails
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Form is Submited.
+Check recaptcha: 
+Form is Submited.
+Check recaptcha: 1
+Start sending mail
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: 
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@mor.vn
+Added emails
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Send: Error info: SMTP Error: Could not authenticate.
