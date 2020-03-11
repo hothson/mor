@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- Main-Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/jquery-background-video/jquery.background-video.css">
     <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
 </head>
 
@@ -59,10 +60,10 @@
     <section class="video-area">
         <div class="container-fluid">
             <div class="row">
-                <div class="video">
-                    <!-- <video autoplay loop>
+                <div class="video element-with-video-bg jquery-background-video-wrapper">
+                    <video class="my-background-video jquery-background-video" data-bgvideo="true" autoplay loop muted playsinline>
                         <source id="video" src="videos/World - 1992.mp4" type="video/mp4">
-                    </video> -->
+                    </video>
                     <img src="images/logo_plus_slogan.png" alt="">
                 </div>
             </div>
@@ -433,9 +434,11 @@
                                                     <p>個人情報の取り扱いに関する苦情および相談を受けた場合には、その内容について事実関係等を迅速に調査し、合理的な期間内に誠意をもって対応いたします。</p>
 
                                                     <h3>6．個人情報保護マネジメントシステムの改善</h3>
-                                                    <p>当社は、社会情勢・社会環境の変化を踏まえ保有する個人情報の保護に関するための方針、監査および見直しを含むマネジメントシステムを適切に継続的な改善を行います。
-                                                        代表取締役社長　レ　マン　フン（Le Manh Hung） ＜弊社の個人情報に関するご相談窓口＞ 本個人情報保護方針に関するお問い合わせは、下記までお願いします。 個人情報保護取扱窓口
-                                                        contact@mor.vn なお、採用活動を通じてご提供いただいたお客様の個人情報に関するお問い合わせは、上記メールアドレス若しくは総合窓口（03-5924-6616）にて承ります。</p>
+                                                    <p>個人情報保護マネジメントシステムの改善 当社は、社会情勢・社会環境の変化を踏まえ保有する個人情報の保護に関するための方針、
+                                                        監査および見直しを含むマネジメントシステムを適切に継続的な改善を行います。 ＜弊社の個人情報に関するご相談窓口＞ 
+                                                        本個人情報保護方針に関するお問い合わせは、下記までお願いします。 代表取締役社長　北田 智一 個人情報保護取扱窓口 
+                                                        contact@morsoftware.com なお、採用活動を通じてご提供いただいたお客様の個人情報に関するお問い合わせは、
+                                                        上記メールアドレス若しくは総合窓口（03-5924-6616）にて承ります。</p>
 
                                                     <span>制定日　2017年2月1日</span>
                                                 </div>
@@ -463,13 +466,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!--Main-active-JS-->
     <script src="js/main.js"></script>
-    <script src="js/baobav.js"></script>
+    <script src="node_modules/jquery-background-video/jquery.background-video.js"></script>
+
     <script>
-        bav("body").play({
-            "videos": ["videos/World - 1992.mp4"]
-        }, {
-            parallax: true,
-            loopMode: 'repeatLast'
+        $('.my-background-video').bgVideo({
+            fullScreen: false, // Sets the video to be fixed to the full window - your <video> and it's container should be direct descendents of the <body> tag
+            fadeIn: 0, // Milliseconds to fade video in/out (0 for no fade)
+            pauseAfter: 86400, // Seconds to play before pausing (0 for forever)
+            fadeOnPause: false, // For all (including manual) pauses
+            fadeOnEnd: true, // When we've reached the pauseAfter time
+            showPausePlay: true, // Show pause/play button
+            pausePlayXPos: 'right', // left|right|center
+            pausePlayYPos: 'top', // top|bottom|center
+            pausePlayXOffset: '15px', // pixels or percent from side - ignored if positioned center
+            pausePlayYOffset: '15px' // pixels or percent from top/bottom - ignored if positioned center
         });
     </script>
 </body>

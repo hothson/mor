@@ -111,7 +111,7 @@ html, body {
 
     .video img {
         width: 118px;
-        top: 49%;
+        top: 28%;
     }
 
     .video-area .vision-content {
@@ -125,6 +125,11 @@ html, body {
 
     .vision-content h3 {
         font-size: 18px;
+    }
+
+    .video-area .video {
+        height: 173px;
+        width: 100%;
     }
 }
 
@@ -149,6 +154,11 @@ html, body {
     .vision-content h3 {
         font-size: 33px;
     }
+
+    .video-area .video {
+        height: 312px;
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -158,6 +168,11 @@ html, body {
 
     .video img {
         width: 242px;
+    }
+
+    .video-area .video {
+        height: 415px;
+        width: 100%;
     }
 }
 
@@ -181,6 +196,11 @@ html, body {
     .vision-content h3 {
         font-size: 58px;
     }
+
+    .video-area .video {
+        height: 545px;
+        width: 100%;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -191,6 +211,11 @@ html, body {
     .video img {
         width: 370px;
         top: 39%;
+    }
+
+    .video-area .video {
+        height: 660px;
+        width: 100%;
     }
 }
 
