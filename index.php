@@ -92,10 +92,8 @@
                     <div class="service-col">
                         <h1>オフショア開発</h1>
                         <p>
-                            ベトナム開発拠点にて、アプリからBtoB webシステム、IoTやAIまで幅広く開発しています。受託開発・ラボ型開発のどちらも ご用意しております
-                        </p>
-                        <p>
-                            ので、ご要望に沿ったスタイルでの、開発をご提案いたします
+                            <span class="first">ベトナム開発拠点にて、アプリからBtoB webシステム、IoTやAIまで幅広く開発しています。受託開発・ラボ型開発のどちらも ご用意しております</span>
+                            <span>ので、ご要望に沿ったスタイルでの、開発をご提案いたします</span>
                         </p>
                     </div>
                 </div>
@@ -111,10 +109,8 @@
                     <div class="service-col">
                         <h1>人材紹介</h1>
                         <p>
-                            日本語堪能かつ高いエンジニアスキルを持つハイクオリティなベトナム人エンジニア
-                        </p>
-                        <p>
-                            の紹介をしております。ビザ等の手間のかかる手続きまで代行いたします。
+                            <span class="first">日本語堪能かつ高いエンジニアスキルを持つハイクオリティなベトナム人エンジニア</span>
+                            <span>の紹介をしております。ビザ等の手間のかかる手続きまで代行いたします。</span>
                         </p>
                     </div>
                 </div>
@@ -205,7 +201,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">グループ会社HP</th>
+                                    <th scope="row" class="th-custom2">グループ会社HP</th>
                                     <td colspan="2"><a href="https://morsoftware.com/">https://morsoftware.com/</a></td>
                                 </tr>
                             </tbody>

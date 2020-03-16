@@ -253,6 +253,10 @@ html, body {
     text-align: center;
 }
 
+.service-col .first{
+    display: block;
+}
+
 @media (max-width: 575.98px) {
     .service-area .service-col {
         height: 291px;
@@ -304,11 +308,6 @@ html, body {
     background-color: #D8E1EB;
 }
 
-
-@media (min-width: 576px) {
-
-}
-
 .news-area {
     background-color: #FFFFFF;
 }
@@ -341,6 +340,12 @@ html, body {
 
 .about-col .ul-custom {
     padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+    .about-col .th-custom2 {
+        min-width: 145px;
+    }
 }
 
 .access-area {
