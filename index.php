@@ -91,19 +91,31 @@
                 <div class="col-md-4 col-12">
                     <div class="service-col">
                         <h1>オフショア開発</h1>
-                        <p>ベトナム開発拠点にて、アプリからBtoB webシステム、IoTやAIまで幅広く開発しています。受託開発のみならず、ラボ型開発の対応しておりますので、ご要望に沿ったスタイルでの、開発をご提案いたします</p>
+                        <p>
+                            ベトナム開発拠点にて、アプリからBtoB webシステム、IoTやAIまで幅広く開発しています。受託開発・ラボ型開発のどちらも ご用意しております
+                        </p>
+                        <p>
+                            ので、ご要望に沿ったスタイルでの、開発をご提案いたします
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="service-col">
                         <h1>​AIサービス</h1>
-                        <p>自社でのAI研究開発高精度の顔認証サービス”​Smart Brain”をはじめとする、AIサービスを提供しております。その他、文字認証や画像認証等の独自サービスを展開しております。</p>
+                        <p>
+                            自社にてAI研究開発をしており、 高精度の顔認証サービス”​Smart Brain”をはじめとする、AIサービスを提供しております。その他、文字認証や画像認証等の独自サービスを展開しております。
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4 col-12">
                     <div class="service-col">
                         <h1>人材紹介</h1>
-                        <p>日本語堪能かつ高いエンジニアスキルを持つハイクオリティなベトナムジンエンジニアの紹介をしております。ビザ等の手間のかかる手続きまで代行いたします。</p>
+                        <p>
+                            日本語堪能かつ高いエンジニアスキルを持つハイクオリティなベトナム人エンジニア
+                        </p>
+                        <p>
+                            の紹介をしております。ビザ等の手間のかかる手続きまで代行いたします。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -183,19 +195,18 @@
                                         MOR Software JSC / ベトナム ホーチミンオフィス <br>
                                         7F, 385 To Hien Thanh, 14 Ward, 10 District, Ho Chi Minh City, Vietnam
                                         <br>
-                                        <a href="https://mor.vn">https://mor.vn</a>
-                                        <br>
                                         <br>
                                         MOR Hanoi Branch / ベトナム ハノイオフィス <br>
                                         6F, CT1 Tower, Bac Ha C14 Building, To Huu Street, Hanoi, Vietnam
                                         <br>
-                                        <a href="https://mor.vn">https://mor.vn</a>
-                                        <br>
                                         <br>
                                         MOR Technology Creative / ベトナム ダナンオフィス <br>
                                         4F, BYB Building, 166 Le Do Street, Da Nang, Vietnam
-                                        <a href="https://mor.vn">https://mor.vn</a>
                                     </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">グループ会社HP</th>
+                                    <td colspan="2"><a href="https://morsoftware.com/">https://morsoftware.com/</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -289,8 +300,7 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                    <form method="POST" action="function.php" class="needs-validation contact-form" novalidate
-                        onsubmit="submitUserForm();">
+                    <form method="POST" action="function.php" class="needs-validation contact-form" novalidate onsubmit="submitUserForm();">
                         <?php if (isset($_SESSION['success'])) { ?>
                             <div class="alert alert-success" role="alert">
                                 <?php echo ($_SESSION['success']); ?>
@@ -349,10 +359,10 @@
                             <div class="g-recaptcha" data-callback="verifyCaptcha" data-sitekey="6LeKvtwUAAAAAOjB93M0YthOK28hfE3A1hqhJUse"></div>
                             <div id="g-recaptcha-error" class="g-recaptcha-error"></div>
                             <?php if (isset($_SESSION['captcha_error'])) { ?>
-                            <div class="g-recaptcha-error">
-                                <?php echo ($_SESSION['captcha_error']); ?>
-                            </div>
-                        <?php } ?>
+                                <div class="g-recaptcha-error">
+                                    <?php echo ($_SESSION['captcha_error']); ?>
+                                </div>
+                            <?php } ?>
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary custom">送信</button>
                     </form>
@@ -435,8 +445,8 @@
 
                                                     <h3>6．個人情報保護マネジメントシステムの改善</h3>
                                                     <p>個人情報保護マネジメントシステムの改善 当社は、社会情勢・社会環境の変化を踏まえ保有する個人情報の保護に関するための方針、
-                                                        監査および見直しを含むマネジメントシステムを適切に継続的な改善を行います。 ＜弊社の個人情報に関するご相談窓口＞ 
-                                                        本個人情報保護方針に関するお問い合わせは、下記までお願いします。 代表取締役社長　北田 智一 個人情報保護取扱窓口 
+                                                        監査および見直しを含むマネジメントシステムを適切に継続的な改善を行います。 ＜弊社の個人情報に関するご相談窓口＞
+                                                        本個人情報保護方針に関するお問い合わせは、下記までお願いします。 代表取締役社長　北田 智一 個人情報保護取扱窓口
                                                         contact@morsoftware.com なお、採用活動を通じてご提供いただいたお客様の個人情報に関するお問い合わせは、
                                                         上記メールアドレス若しくは総合窓口（03-5924-6616）にて承ります。</p>
 
@@ -471,7 +481,7 @@
     <script>
         $('.my-background-video').bgVideo({
             fullScreen: false, // Sets the video to be fixed to the full window - your <video> and it's container should be direct descendents of the <body> tag
-            fadeIn: 0, // Milliseconds to fade video in/out (0 for no fade)
+            fadeIn: 86400, // Milliseconds to fade video in/out (0 for no fade)
             pauseAfter: 86400, // Seconds to play before pausing (0 for forever)
             fadeOnPause: false, // For all (including manual) pauses
             fadeOnEnd: true, // When we've reached the pauseAfter time
@@ -481,6 +491,8 @@
             pausePlayXOffset: '15px', // pixels or percent from side - ignored if positioned center
             pausePlayYOffset: '15px' // pixels or percent from top/bottom - ignored if positioned center
         });
+        $.fn.bgVideo.defaults.fadeIn = 0;
+        $.fn.bgVideo.defaults.pauseAfter = 0;
     </script>
 </body>
 

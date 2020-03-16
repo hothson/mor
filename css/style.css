@@ -250,6 +250,7 @@ html, body {
     color: white;
     font-size: 16px;
     padding: 0px 20px;
+    text-align: center;
 }
 
 @media (max-width: 575.98px) {
