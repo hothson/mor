@@ -22,7 +22,10 @@ class Contact
         $responseData = $this->checkRecaptcha($_POST['g-recaptcha-response']);
         error_log("Check recaptcha: " . $responseData . "\n", 3, "logs/my-errors.log");
         if ($responseData) {
-            $this->sendMail($name, $companyName, $email, $subject, $requirement);
+            $mailRes = $this->sendMail($name, $companyName, $email, $subject, $requirement);
+            if ($mailRes) {
+                $this->replyCustomer($name, $companyName, $email, $subject, $requirement);
+            }
         } else {
             session_start();
             $_SESSION['captcha_error'] = 'Robot verification failed, please try again.';
@@ -30,6 +33,12 @@ class Contact
             
             return $this->redirectPage();
         }
+
+        return $this->redirectPage();
+    }
+
+    private function replyCustomer($name, $companyName, $email, $subject, $requirement) {
+
     }
 
     public function redirectPage() {
@@ -101,7 +110,6 @@ class Contact
             $_SESSION['success'] = 'Your contact request have submitted successfully.';
             error_log("Mail is sent" . "\n", 3, "logs/my-errors.log");
             
-            return $this->redirectPage();
         } catch (Exception $e) {
             session_start();
             $_SESSION['error'] = "Mailer is not working!";
@@ -110,6 +118,8 @@ class Contact
 
             return $this->redirectPage();
         }
+
+        return true;
     }
 }
 
