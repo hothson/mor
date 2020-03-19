@@ -1,0 +1,289 @@
+Form is Submited.
+Check recaptcha: 1
+Start sending mail to ishothson@gmail.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Start sending mail to contact@morsoftware.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Mail is sent to admin
+Start sending mail to hothson@gmail.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: Reply to PHP
+Body: <h3>Ho Thanh Son様</h3>
+
+            <div>この度はモアアジアへお問合せいただき、誠にありがとうございます。
+                以下の内容を受け付けました。
+                後日担当よりご返信させていただきます。</div>
+            <div>※このメールに返信いただいても、ご返答できませんのでご了承ください。</div>
+            <div>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div>
+            
+            <h5>【 送信日時 】</h5>
+            <span>2020-03-19 12:03</span>
+            
+            <h5>【 御社名 】</h5>
+            <span>php</span>
+            
+            <h5>【 お名前 】</h5>
+            <span>Ho Thanh Son</span>
+            
+            <h5>【 メールアドレス 】</h5>
+            <span>hothson@gmail.com</span>
+            
+            <h5>【 お電話番号 】</h5>
+            <span></span>
+            
+            <h5>【 ご相談・ご依頼内容 】</h5>
+            <span>PHP</span>
+            
+            <h5>【 その他 】</h5>
+            <p>php</p>
+            <div>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div>
+            <div>
+                 /*---------------------------------*/<br>
+                株式会社モアアジア<br>
+                〒171-0022<br>
+                東京都豊島区南池袋2-9-3 サンビルディング4階<br>
+                Tel： 03-5924-6616（日本）<br>
+                Mail：sales@morsoftware.com<br>
+                URL：https://morsoftware.com<br>
+                /*---------------------------------*/
+            </div>
+Form is Submited.
+Check recaptcha: 1
+Start sending mail to ishothson@gmail.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Start sending mail to contact@morsoftware.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Mail is sent to admin
+Form is Submited.
+Check recaptcha: 
+Form is Submited.
+Check recaptcha: 1
+Start sending mail to ishothson@gmail.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Start sending mail to contact@morsoftware.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Mail is sent to admin
+Form is Submited.
+Check recaptcha: 
+Form is Submited.
+Check recaptcha: 1
+Start sending mail to ishothson@gmail.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Start sending mail to contact@morsoftware.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Mail is sent to admin
+Start sending mail to hothson@gmail.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: Reply to 【モアアジア】お問い合わせありがとうございました。
+Body: <h3>Ho Thanh Son様</h3>
+
+            <div>この度はモアアジアへお問合せいただき、誠にありがとうございます。
+                以下の内容を受け付けました。
+                後日担当よりご返信させていただきます。</div>
+            <div>※このメールに返信いただいても、ご返答できませんのでご了承ください。</div>
+            <div>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div>
+            
+            <h5>【 送信日時 】</h5>
+            <span>2020-03-19 13:18</span>
+            
+            <h5>【 御社名 】</h5>
+            <span>php</span>
+            
+            <h5>【 お名前 】</h5>
+            <span>Ho Thanh Son</span>
+            
+            <h5>【 メールアドレス 】</h5>
+            <span>hothson@gmail.com</span>
+            
+            <h5>【 お電話番号 】</h5>
+            <span></span>
+            
+            <h5>【 ご相談・ご依頼内容 】</h5>
+            <span>PHP</span>
+            
+            <h5>【 その他 】</h5>
+            <p>php</p>
+            <div>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div>
+            <div>
+                 /*---------------------------------*/<br>
+                株式会社モアアジア<br>
+                〒171-0022<br>
+                東京都豊島区南池袋2-9-3 サンビルディング4階<br>
+                Tel： 03-5924-6616（日本）<br>
+                Mail：sales@morsoftware.com<br>
+                URL：https://morsoftware.com<br>
+                /*---------------------------------*/
+            </div>
+Form is Submited.
+Check recaptcha: 1
+Start sending mail to ishothson@gmail.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Start sending mail to contact@morsoftware.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: PHP
+Body: <h4>The persion with following infomation has contacted you</h4><span>Name: Ho Thanh Son</span><br><span>Company Name: php</span><br><span>Mail: hothson@gmail.com</span><br><span>Subject: PHP</span><br><span>Content: php</span><br>
+Mail is sent to admin
+Start sending mail to hothson@gmail.com
+Mail Host: smtp.gmail.com
+MAIL_SMTPAuth: 1
+MAIL_USERNAME: ishothson@gmail.com
+MAIL_PASSWORD: Zorno@33
+Username, Password are authenticated
+MAIL_PORT: 587
+Mail server authenticated
+MAIL_FROM: ishothson@gmail.com
+MAIL_TO: contact@morsoftware.com
+Subject: 【モアアジア】お問い合わせありがとうございました。
+Body: <h3>Ho Thanh Son様</h3>
+
+            <div>この度はモアアジアへお問合せいただき、誠にありがとうございます。
+                以下の内容を受け付けました。
+                後日担当よりご返信させていただきます。</div>
+            <div>※このメールに返信いただいても、ご返答できませんのでご了承ください。</div>
+            <div>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div>
+            
+            <h5>【 送信日時 】</h5>
+            <span>2020-03-19 13:21</span>
+            
+            <h5>【 御社名 】</h5>
+            <span>php</span>
+            
+            <h5>【 お名前 】</h5>
+            <span>Ho Thanh Son</span>
+            
+            <h5>【 メールアドレス 】</h5>
+            <span>hothson@gmail.com</span>
+            
+            <h5>【 お電話番号 】</h5>
+            <span></span>
+            
+            <h5>【 ご相談・ご依頼内容 】</h5>
+            <span>PHP</span>
+            
+            <h5>【 その他 】</h5>
+            <p>php</p>
+            <div>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div>
+            <div>
+                 /*---------------------------------*/<br>
+                株式会社モアアジア<br>
+                〒171-0022<br>
+                東京都豊島区南池袋2-9-3 サンビルディング4階<br>
+                Tel： 03-5924-6616（日本）<br>
+                Mail：sales@morsoftware.com<br>
+                URL：https://morsoftware.com<br>
+                /*---------------------------------*/
+            </div>

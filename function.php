@@ -49,7 +49,7 @@ class Contact
         }
 
         $mailTo = $_POST['email'];
-        $this->sendMail($mailTo, $customerMailBody,"Reply to " . $subject);
+        $this->sendMail($mailTo, $customerMailBody,PREFIX_SUBJECT);
 
         return $this->redirectPage();
     }
@@ -82,7 +82,7 @@ class Contact
         $time = date("Y-m-d H:i");
 
         $body = 
-            "<h3>$name様</h3>
+            "<h3>" . $name . "様</h3>
 
             <div>この度はモアアジアへお問合せいただき、誠にありがとうございます。
                 以下の内容を受け付けました。
@@ -176,7 +176,8 @@ class Contact
             error_log("MAIL_TO: " . MAIL_TO . "\n", 3, "logs/my-errors.log");
 
             // Content
-            $mail->isHTML(true);                          
+            $mail->isHTML(true);     
+            $mail->CharSet = 'UTF-8';                     
             $mail->Subject = $subject;
             error_log("Subject: " . $mail->Subject . "\n", 3, "logs/my-errors.log");
             

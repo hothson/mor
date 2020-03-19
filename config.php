@@ -11,3 +11,5 @@
     define('MAIL_TO', 'contact@morsoftware.com');
     define('MAIL_TO_TEST', 'ishothson@gmail.com');
     define('MAIL_TO_NAME', 'Admin');
+    define('PREFIX_SUBJECT', '【モアアジア】お問い合わせありがとうございました。');
+    
