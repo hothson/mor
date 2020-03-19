@@ -82,7 +82,7 @@ class Contact
         $time = date("Y-m-d H:i");
 
         $body = 
-            "<h3>$name 様</h3>
+            "<h3>$name様</h3>
 
             <div>この度はモアアジアへお問合せいただき、誠にありがとうございます。
                 以下の内容を受け付けました。
