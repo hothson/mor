@@ -12,21 +12,10 @@ class Contact
 
     public function submitContact() {
         error_log("Form is Submited." . "\n", 3, "logs/my-errors.log");
-        if (isset($_POST['submit'])) {
-            $name = $_POST['name'];
-            $companyName = $_POST['company-name'];
-            $email = $_POST['email'];
-            $subject = $_POST['subject'];
-            $requirement = $_POST['requirement'];
-        }
+        
         $responseData = $this->checkRecaptcha($_POST['g-recaptcha-response']);
         error_log("Check recaptcha: " . $responseData . "\n", 3, "logs/my-errors.log");
-        if ($responseData) {
-            $mailRes = $this->sendMail($name, $companyName, $email, $subject, $requirement);
-            if ($mailRes) {
-                $this->replyCustomer($name, $companyName, $email, $subject, $requirement);
-            }
-        } else {
+        if (!$responseData) {
             session_start();
             $_SESSION['captcha_error'] = 'Robot verification failed, please try again.';
             $_SESSION['post_data'] = $_POST;
@@ -34,11 +23,106 @@ class Contact
             return $this->redirectPage();
         }
 
+        if (isset($_POST['submit'])) {
+            $subject = $_POST['subject'];
+        }
+
+        $body = $this->getMailContentBody($_POST, 'admin');
+        $mailRes = $this->sendMail(MAIL_TO_TEST, $body, $subject);
+        $mailRes = $this->sendMail(MAIL_TO, $body, $subject);
+
+        if (!$mailRes) {
+            return false;
+        }
+
+        session_start();
+        $_SESSION['success'] = 'Your contact request have submitted successfully.';
+        error_log("Mail is sent to admin" . "\n", 3, "logs/my-errors.log");
+
+        //Reply customer'mail
+        $customerMailBody = $this->getMailContentBody($_POST, 'customer');
+
+        if (!isset($_POST['email'])) {
+            echo("There is no customer's email");
+            
+            return $this->redirectPage();
+        }
+
+        $mailTo = $_POST['email'];
+        $this->sendMail($mailTo, $customerMailBody,"Reply to " . $subject);
+
         return $this->redirectPage();
     }
 
-    private function replyCustomer($name, $companyName, $email, $subject, $requirement) {
+    private function getMailContentBody($data, $flag) {
+        if (!isset($data['submit'])) {
+            echo("No data to create mail content");
 
+            return false;
+        }
+
+        $name = $data['name'];
+        $companyName = $data['company-name'];
+        $email = $data['email'];
+        $subject = $data['subject'];
+        $requirement = $data['requirement'];
+
+
+        if ($flag == 'admin') {
+            $body = '<h4>The persion with following infomation has contacted you</h4>'
+                . '<span>Name: ' . $name . '</span><br>'
+                . '<span>Company Name: ' . $companyName . '</span><br>'
+                . '<span>Mail: ' . $email . '</span><br>'
+                . '<span>Subject: ' . $subject . '</span><br>'
+                . '<span>Content: ' . $requirement . '</span><br>';
+
+            return $body;
+        }
+
+        $time = date("Y-m-d H:i");
+
+        $body = 
+            "<h3>$name 様</h3>
+
+            <div>この度はモアアジアへお問合せいただき、誠にありがとうございます。
+                以下の内容を受け付けました。
+                後日担当よりご返信させていただきます。</div>
+            <div>※このメールに返信いただいても、ご返答できませんのでご了承ください。</div>
+            <div>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div>
+            
+            <h5>【 送信日時 】</h5>
+            <span>$time</span>
+            
+            <h5>【 御社名 】</h5>
+            <span>$companyName</span>
+            
+            <h5>【 お名前 】</h5>
+            <span>$name</span>
+            
+            <h5>【 メールアドレス 】</h5>
+            <span>$email</span>
+            
+            <h5>【 お電話番号 】</h5>
+            <span></span>
+            
+            <h5>【 ご相談・ご依頼内容 】</h5>
+            <span>$subject</span>
+            
+            <h5>【 その他 】</h5>
+            <p>$requirement</p>
+            <div>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</div>
+            <div>
+                 /*---------------------------------*/<br>
+                株式会社モアアジア<br>
+                〒171-0022<br>
+                東京都豊島区南池袋2-9-3 サンビルディング4階<br>
+                Tel： 03-5924-6616（日本）<br>
+                Mail：sales@morsoftware.com<br>
+                URL：https://morsoftware.com<br>
+                /*---------------------------------*/
+            </div>";
+
+        return $body;
     }
 
     public function redirectPage() {
@@ -54,9 +138,10 @@ class Contact
             return $responseData->success;
     }
 
-    public function sendMail($name, $companyName, $email, $subject, $requirement) {
+    public function sendMail($mailTo, $body, $subject) {
         try {
-            error_log("Start sending mail" . "\n", 3, "logs/my-errors.log");
+
+            error_log("Start sending mail to $mailTo" . "\n", 3, "logs/my-errors.log");
 
             //Server settings
             $mail = new PHPMailer(true);
@@ -87,28 +172,18 @@ class Contact
             error_log("MAIL_FROM: " . MAIL_FROM . "\n", 3, "logs/my-errors.log");
             $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
             // Add a recipient
-            $mail->addAddress(MAIL_TO, MAIL_TO_NAME);
+            $mail->addAddress($mailTo, MAIL_TO_NAME);
             error_log("MAIL_TO: " . MAIL_TO . "\n", 3, "logs/my-errors.log");
 
-            $mail->addAddress(MAIL_TO_TEST, MAIL_TO_NAME);
-            error_log("Added emails" . "\n", 3, "logs/my-errors.log");
             // Content
             $mail->isHTML(true);                          
-            $mail->Subject = $subject ?? 'Somebody contact you';
+            $mail->Subject = $subject;
             error_log("Subject: " . $mail->Subject . "\n", 3, "logs/my-errors.log");
-            $body = '<h4>The persion with following infomation has contacted you</h4>'
-                . '<span>Name: ' . $name . '</span><br>'
-                . '<span>Company Name: ' . $companyName . '</span><br>'
-                . '<span>Mail: ' . $email . '</span><br>'
-                . '<span>Subject: ' . $subject . '</span><br>'
-                . '<span>Content: ' . $requirement . '</span><br>';
+            
             $mail->Body    = $body;
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             error_log("Body: " . $mail->Body . "\n", 3, "logs/my-errors.log");
             $mail->send();
-            session_start();
-            $_SESSION['success'] = 'Your contact request have submitted successfully.';
-            error_log("Mail is sent" . "\n", 3, "logs/my-errors.log");
             
         } catch (Exception $e) {
             session_start();

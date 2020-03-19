@@ -10,4 +10,4 @@
     define('MAIL_FROM_NAME', 'MOR ASIA');
     define('MAIL_TO', 'contact@morsoftware.com');
     define('MAIL_TO_TEST', 'ishothson@gmail.com');
-    define('MAIL_TO_NAME', 'MOR ASIA');
+    define('MAIL_TO_NAME', 'Admin');
