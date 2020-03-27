@@ -1,5 +1,5 @@
 <?php
-    define('RECAPTCHA_SECRET_KEY', '6LeKvtwUAAAAAGcvStJ7yg0fElMHs7NLvBQ9wy6e');
+    define('RECAPTCHA_SECRET_KEY', '6LeQX-QUAAAAAKamXrdXX5opEOjse-S--F0h1m13');
     define('MAIL_HOST', 'smtp.gmail.com');
     define('MAIL_SMTPAuth', true);
     define('MAIL_USERNAME', 'ishothson@gmail.com');

@@ -8,7 +8,7 @@ include 'config.php';
 
 class Contact
 {
-    public $url = "http://morasia.mor.com.vn/#contact";
+    public $url = "http://morasia.co.jp/#contact";
 
     public function submitContact() {
         error_log("Form is Submited." . "\n", 3, "logs/my-errors.log");
@@ -17,7 +17,7 @@ class Contact
         error_log("Check recaptcha: " . $responseData . "\n", 3, "logs/my-errors.log");
         if (!$responseData) {
             session_start();
-            $_SESSION['captcha_error'] = 'Robot verification failed, please try again.';
+            $_SESSION['captcha_error'] = '認証に失敗しました。もう一度お試しください。';
             $_SESSION['post_data'] = $_POST;
             
             return $this->redirectPage();
@@ -36,7 +36,7 @@ class Contact
         }
 
         session_start();
-        $_SESSION['success'] = 'Your contact request have submitted successfully.';
+        $_SESSION['success'] = 'お問い合わせ受け付けました。';
         error_log("Mail is sent to admin" . "\n", 3, "logs/my-errors.log");
 
         //Reply customer'mail
@@ -188,7 +188,7 @@ class Contact
             
         } catch (Exception $e) {
             session_start();
-            $_SESSION['error'] = "Mailer is not working!";
+            $_SESSION['error'] = "メールが動きません。";
             
             error_log("Error info: $mail->ErrorInfo", 3, "logs/my-errors.log");
 

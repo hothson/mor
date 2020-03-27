@@ -351,7 +351,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="g-recaptcha" data-callback="verifyCaptcha" data-sitekey="6LeKvtwUAAAAAOjB93M0YthOK28hfE3A1hqhJUse"></div>
+                            <div class="g-recaptcha" data-callback="verifyCaptcha" data-sitekey="6LeQX-QUAAAAAFmrQFO_G5omByFPxochaBqwWsba"></div>
                             <div id="g-recaptcha-error" class="g-recaptcha-error"></div>
                             <?php if (isset($_SESSION['captcha_error'])) { ?>
                                 <div class="g-recaptcha-error">
