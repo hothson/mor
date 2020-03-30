@@ -532,3 +532,7 @@ html, body {
 .jquery-background-video-pauseplay {
     display: none !important;
 }
+
+.element-with-video-bg {
+	background-image: url("../videos/world-1992.gif");
+}
