@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- Main-Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/jquery-background-video/jquery.background-video.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.background-video.css">
     <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
 </head>
 
@@ -295,7 +295,7 @@
             <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
-                    <form method="POST" action="function.php" class="needs-validation contact-form" novalidate onsubmit="submitUserForm();">
+                    <form method="POST" action="function.php" class="needs-validation contact-form" novalidate>
                         <?php if (isset($_SESSION['success'])) { ?>
                             <div class="alert alert-success" role="alert">
                                 <?php echo ($_SESSION['success']); ?>
@@ -471,7 +471,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!--Main-active-JS-->
     <script src="js/main.js"></script>
-    <script src="node_modules/jquery-background-video/jquery.background-video.js"></script>
+    <script src="js/jquery.background-video.js"></script>
 
     <script>
         $('.my-background-video').bgVideo({
@@ -488,6 +488,11 @@
         });
         $.fn.bgVideo.defaults.fadeIn = 0;
         $.fn.bgVideo.defaults.pauseAfter = 0;
+
+        $(document).ready(function() {
+            var noHashURL = window.location.href.replace(/#.*$/, '');
+            window.history.replaceState('', document.title, noHashURL);
+        });
     </script>
 </body>
 

@@ -528,3 +528,7 @@ html, body {
 .news-area .news {
     margin-bottom: 35px;
 }
+
+.jquery-background-video-pauseplay {
+    display: none !important;
+}
